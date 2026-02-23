@@ -19,8 +19,43 @@
   <header id="header">
     <div class="header-content">
       <h1>RecMap<span>Seattle Community Centers</span></h1>
+      <div class="header-buttons">
+        <button id="filter-toggle" class="header-btn">Filters</button>
+        <button id="tab-map" class="header-btn active">Map</button>
+        <button id="tab-schedule" class="header-btn">Schedule</button>
+      </div>
     </div>
   </header>
+
+  <div id="filter-bar" class="hidden">
+    <div class="filter-dropdowns">
+      <div class="dropdown" id="dd-centers">
+        <button class="dropdown-toggle">Centers <span class="dd-count">All</span></button>
+        <div class="dropdown-panel hidden">
+          <div class="dd-actions">
+            <button class="dd-select-all">Select All</button>
+            <button class="dd-clear">Clear</button>
+          </div>
+          <div class="dd-options" id="dd-centers-options"></div>
+        </div>
+      </div>
+      <div class="dropdown" id="dd-categories">
+        <button class="dropdown-toggle">Categories <span class="dd-count">All</span></button>
+        <div class="dropdown-panel hidden">
+          <div class="dd-actions">
+            <button class="dd-select-all">Select All</button>
+            <button class="dd-clear">Clear</button>
+          </div>
+          <div class="dd-options" id="dd-categories-options"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="schedule-panel" class="hidden">
+    <div class="day-tabs" id="day-tabs"></div>
+    <div id="schedule-list"></div>
+  </div>
 
   <div id="map"></div>
 
