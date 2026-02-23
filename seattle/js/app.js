@@ -22,8 +22,8 @@
   let markersLayer = L.featureGroup();
 
   const filters = {
-    centers: new Set(),     // empty = all shown
-    categories: new Set(),  // empty = all shown
+    centers: new Set(),     // contains checked items; populated on data load
+    categories: new Set(),  // contains checked items; populated on data load
   };
   let activeTab = 'map';    // 'map' or 'schedule'
   let activeDay = 'Monday';
@@ -136,18 +136,16 @@
     if (events.length === 0) return true; // always show "coming soon" on map
 
     // Center filter
-    if (filters.centers.size > 0 && !filters.centers.has(loc.name)) return false;
+    if (!filters.centers.has(loc.name)) return false;
 
     // Category filter — location passes if ANY of its events match
-    if (filters.categories.size > 0) {
-      const hasMatch = events.some(e => filters.categories.has(e.category));
-      if (!hasMatch) return false;
-    }
+    const hasMatch = events.some(e => filters.categories.has(e.category));
+    if (!hasMatch) return false;
+
     return true;
   }
 
   function eventPassesCategoryFilter(evt) {
-    if (filters.categories.size === 0) return true;
     return filters.categories.has(evt.category);
   }
 
@@ -278,13 +276,16 @@
     const selectAllBtn = dropdown.querySelector('.dd-select-all');
     const clearBtn = dropdown.querySelector('.dd-clear');
 
+    // Initialize: all items selected
+    for (const item of items) filterSet.add(item);
+
     optionsEl.innerHTML = '';
     for (const item of items) {
       const label = document.createElement('label');
       const cb = document.createElement('input');
       cb.type = 'checkbox';
       cb.value = item;
-      cb.checked = filterSet.size === 0 || filterSet.has(item);
+      cb.checked = true;
       label.appendChild(cb);
       label.appendChild(document.createTextNode(item));
       optionsEl.appendChild(label);
@@ -293,16 +294,7 @@
         if (this.checked) {
           filterSet.add(item);
         } else {
-          // If set is empty (= all shown), fill it first, then remove this one
-          if (filterSet.size === 0) {
-            for (const i of items) filterSet.add(i);
-          }
           filterSet.delete(item);
-        }
-        // If all are checked, clear set (= show all)
-        if (filterSet.size === items.length) {
-          filterSet.clear();
-          optionsEl.querySelectorAll('input').forEach(c => { c.checked = true; });
         }
         updateCount();
         applyFilters();
@@ -310,7 +302,7 @@
     }
 
     function updateCount() {
-      if (filterSet.size === 0) {
+      if (filterSet.size === items.length) {
         countEl.textContent = 'All';
       } else {
         countEl.textContent = filterSet.size + ' selected';
@@ -329,7 +321,7 @@
 
     // Select All
     selectAllBtn.addEventListener('click', function () {
-      filterSet.clear();
+      for (const item of items) filterSet.add(item);
       optionsEl.querySelectorAll('input').forEach(c => { c.checked = true; });
       updateCount();
       applyFilters();
@@ -415,7 +407,7 @@
       if (events.length === 0) continue;
 
       // Center filter
-      if (filters.centers.size > 0 && !filters.centers.has(loc.name)) continue;
+      if (!filters.centers.has(loc.name)) continue;
 
       for (const evt of events) {
         // Category filter
@@ -503,10 +495,8 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       allLocations = data.locations || [];
-      markersLayer.addTo(map);
-      renderMarkers();
 
-      // Populate filter dropdowns
+      // Populate filter dropdowns (fills filter sets) before first render
       const centersWithEvents = allLocations
         .filter(l => l.events && l.events.length > 0)
         .map(l => l.name)
@@ -515,6 +505,9 @@
 
       populateDropdown('dd-centers', centersWithEvents, filters.centers);
       populateDropdown('dd-categories', categories, filters.categories);
+
+      markersLayer.addTo(map);
+      renderMarkers();
 
       // Set initial active day to today (if a weekday name)
       const todayName = DAY_ORDER[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1];
