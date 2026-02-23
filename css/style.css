@@ -1,0 +1,313 @@
+/* ===================================================================
+   RecMap - Styles
+   Mobile-first, minimal, no framework
+   Green/teal color scheme
+   =================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+/* ---- Layout Variable ---- */
+
+:root {
+  --header-h: 44px;
+  --accent: #0d9488;        /* teal-600 */
+  --accent-dark: #0f766e;   /* teal-700 */
+  --accent-light: #ccfbf1;  /* teal-100 */
+  --accent-bg: #f0fdfa;     /* teal-50 */
+}
+
+/* ---- Header ---- */
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  height: var(--header-h);
+}
+
+.header-content {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+#header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+}
+
+#header h1 span {
+  font-weight: 400;
+  font-size: 12px;
+  color: #888;
+  margin-left: 6px;
+  letter-spacing: 0;
+}
+
+/* ---- Header Buttons ---- */
+
+.header-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.header-btn {
+  background: #333;
+  color: #ccc;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-btn:hover { background: #444; color: #fff; }
+.header-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ---- Map ---- */
+
+#map {
+  position: fixed;
+  top: var(--header-h);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* ---- Leaflet Popup Overrides ---- */
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  min-width: 240px;
+  max-width: 320px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Popup Content ---- */
+
+.popup-header {
+  padding: 12px 14px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.popup-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #1a1a1a;
+}
+
+.popup-header .address {
+  font-size: 13px;
+  color: #666;
+}
+
+.popup-header .phone {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+.popup-status {
+  padding: 4px 14px 8px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* ---- Category Sections in Popup ---- */
+
+.popup-category {
+  border-top: 1px solid #eee;
+  padding: 8px 14px;
+}
+
+.popup-category h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-dark);
+  margin-bottom: 6px;
+}
+
+.popup-event {
+  background: #f8f8f8;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.popup-event:last-child {
+  margin-bottom: 0;
+}
+
+.popup-event .event-name {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.popup-event .event-detail {
+  color: #555;
+  margin-bottom: 1px;
+}
+
+.popup-event .event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.popup-event .event-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: #e5e5e5;
+  color: #555;
+}
+
+.popup-event .event-tag.free {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.popup-event .event-tag.paid {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.popup-event .event-tag.reg {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.popup-coming-soon {
+  padding: 12px 14px;
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.popup-directions {
+  display: block;
+  text-align: center;
+  padding: 10px 14px;
+  border-top: 1px solid #eee;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.popup-directions:hover {
+  background: var(--accent-bg);
+}
+
+/* ---- Legend ---- */
+
+#legend {
+  position: fixed;
+  bottom: 24px;
+  left: 12px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 10px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-dot.teal    { background: var(--accent); }
+.legend-dot.gray    { background: #94a3b8; }
+
+/* ---- Season Banner ---- */
+
+#season-banner {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  z-index: 997;
+  background: #fef3c7;
+  color: #92400e;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  border-bottom: 1px solid #fcd34d;
+}
+
+/* ---- Responsive ---- */
+
+@media (min-width: 768px) {
+  :root {
+    --header-h: 48px;
+  }
+
+  #header {
+    padding: 12px 24px;
+  }
+
+  #header h1 {
+    font-size: 22px;
+  }
+
+  .leaflet-popup-content {
+    max-width: 380px;
+  }
+}
