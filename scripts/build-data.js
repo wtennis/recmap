@@ -12,9 +12,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const SOURCES_DIR = path.join(__dirname, '..', 'data', 'sources');
-const CURATED_DIR = path.join(__dirname, '..', 'data', 'curated');
-const OUT_PATH = path.join(__dirname, '..', 'data', 'recmap.json');
+const SOURCES_DIR = path.join(__dirname, '..', 'seattle', 'data', 'sources');
+const CURATED_DIR = path.join(__dirname, '..', 'seattle', 'data', 'curated');
+const OUT_PATH = path.join(__dirname, '..', 'seattle', 'data', 'recmap.json');
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -65,7 +65,7 @@ function findCenter(centerName, centerLookup) {
 // ---------------------------------------------------------------------------
 
 const CATEGORY_KEYWORDS = {
-  'Sports': ['basketball', 'volleyball', 'pickleball', 'badminton', 'tennis', 'soccer', 'baseball', 'softball', 'football', 'hockey', 'rugby', 'lacrosse', 'cricket'],
+  'Sports / Open Gym': ['basketball', 'volleyball', 'pickleball', 'badminton', 'tennis', 'soccer', 'baseball', 'softball', 'football', 'hockey', 'rugby', 'lacrosse', 'cricket', 'open gym', 'free play', 'drop-in gym'],
   'Fitness': ['yoga', 'pilates', 'zumba', 'tai chi', 'cardio', 'strength', 'hiit', 'aerobics', 'stretch', 'conditioning', 'fitness', 'boot camp', 'crossfit'],
   'Aquatics': ['swim', 'pool', 'lap swim', 'open swim', 'water aerobic', 'aqua', 'diving'],
   'Dance': ['ballet', 'hip hop', 'swing', 'ballroom', 'line danc', 'salsa', 'tango', 'jazz dance', 'tap dance', 'modern dance', 'dance'],
@@ -74,13 +74,12 @@ const CATEGORY_KEYWORDS = {
   'Music & Theater': ['guitar', 'piano', 'drum', 'violin', 'ukulele', 'music', 'drama', 'theater', 'theatre', 'choir', 'singing', 'band'],
   'Education': ['computer', 'language', 'stem', 'spanish', 'french', 'chinese', 'esl', 'literacy', 'math', 'science', 'coding', 'programming'],
   'Social & Games': ['game night', 'bingo', 'mahjong', 'chess', 'bridge', 'social', 'trivia', 'board game'],
-  'Open Gym / Drop-In': ['open gym', 'free play', 'drop-in gym'],
 };
 
 function classifyCategory(activity, program) {
   const search = `${activity || ''} ${program || ''}`.toLowerCase();
   // Check Aquatics first — "water aerobics" should be Aquatics, not Fitness
-  const priorityOrder = ['Aquatics', 'Martial Arts', 'Open Gym / Drop-In'];
+  const priorityOrder = ['Aquatics', 'Martial Arts'];
   for (const cat of priorityOrder) {
     for (const kw of CATEGORY_KEYWORDS[cat]) {
       if (search.includes(kw)) return cat;
