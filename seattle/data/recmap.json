@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-23T22:20:20.565Z",
+  "generated_at": "2026-02-23T23:12:10.346Z",
   "seasons": [
     {
       "name": "Spring 2026",
@@ -21,17 +21,31 @@
   "activities": [
     "Badminton",
     "Ballet",
+    "Ballroom Dance",
     "Basketball",
     "Bingo",
+    "Board Games",
     "Cardio",
+    "Cardio Dance",
+    "Chess",
     "Computer Classes",
+    "Cooking",
+    "Crochet",
+    "Dance Fitness",
+    "Dodgeball",
     "Drama",
     "Drawing",
+    "Drumming",
+    "Fiber Arts",
+    "Fitness Room",
     "Game Night",
     "Guitar",
     "Hip Hop",
+    "Jam Session",
+    "Jiu-Jitsu",
     "Judo",
     "Karate",
+    "Kendo",
     "Kung Fu",
     "Language",
     "Lap Swim",
@@ -48,12 +62,19 @@
     "Social Dance",
     "Strength",
     "Swim Lessons",
+    "Table Tennis",
+    "Tae Kwon Do",
     "Taekwondo",
     "Tai Chi",
+    "Tap/Jazz",
+    "Ukulele",
     "Volleyball",
     "Water Aerobics",
+    "Wheelchair Sports",
     "Woodworking",
+    "Wrestling",
     "Yoga",
+    "Youth Development",
     "Zumba"
   ],
   "locations": [
@@ -74,7 +95,122 @@
         "saturday": "closed"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/laurelhurst-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Pottery — Adult Morning",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Pottery",
+          "ages": "18 and Older",
+          "code": "88201",
+          "date_range": "4/7-6/9",
+          "cost": "$460",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "10am-1pm"
+            }
+          ],
+          "notes": "Materials included",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pottery — Adult Evening",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Pottery",
+          "ages": "18 and Older",
+          "code": "88205",
+          "date_range": "4/11-6/13",
+          "cost": "$460",
+          "sessions": [
+            {
+              "day": "Friday",
+              "time": "6:30-9:30pm"
+            }
+          ],
+          "notes": "Materials included",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Youth Pottery",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Pottery",
+          "ages": "8-14",
+          "code": "88210",
+          "date_range": "4/8-6/10",
+          "cost": "$344",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "3:30-5:30pm"
+            }
+          ],
+          "notes": "Materials included",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Ballet — Youth",
+          "type": "program",
+          "category": "Dance",
+          "activity": "Ballet",
+          "ages": "6-8",
+          "code": "88215",
+          "date_range": "4/8-6/10",
+          "cost": "$80",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "2:15-3:15pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Mini Hoopers League",
+          "type": "program",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "6-7",
+          "code": "88220",
+          "date_range": "4/6-6/8",
+          "cost": "$100",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "4:30-5:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Vinyasa Yoga",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Yoga",
+          "ages": "18 and Older",
+          "code": "88225",
+          "date_range": "4/8-6/10",
+          "cost": "$27",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "5:30-6:30pm"
+            }
+          ],
+          "notes": "$27 per class, drop-in welcome",
+          "registration_required": false
+        }
+      ]
     },
     {
       "id": "center-jefferson-park-community-center",
@@ -94,7 +230,183 @@
         "saturday": "9:00 AM - 5:00 PM"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/jefferson-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Adult Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "18 and Older",
+          "code": "87201",
+          "date_range": "4/6-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "6-8:30pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "10am-1pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87205",
+          "date_range": "4/6-6/8",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Badminton Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Badminton",
+          "ages": "16 and Older",
+          "code": "87210",
+          "date_range": "4/7-6/9",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "10am-1pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Ballroom & Line Dance",
+          "type": "drop-in",
+          "category": "Dance",
+          "activity": "Ballroom Dance",
+          "ages": "18 and Older",
+          "code": "87215",
+          "date_range": "4/8-6/10",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Tai Chi",
+          "type": "drop-in",
+          "category": "Fitness",
+          "activity": "Tai Chi",
+          "ages": "18 and Older",
+          "code": "87220",
+          "date_range": "4/8-6/10",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "1-2pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Fiber Arts Group",
+          "type": "drop-in",
+          "category": "Arts & Crafts",
+          "activity": "Fiber Arts",
+          "ages": "18 and Older",
+          "code": "87225",
+          "date_range": "4/11-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Friday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Brazilian Jiu-Jitsu — Youth",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Jiu-Jitsu",
+          "ages": "5-8",
+          "code": "87230",
+          "date_range": "4/7-6/9",
+          "cost": "$120",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "4:30-5:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pottery — Adult",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Pottery",
+          "ages": "18 and Older",
+          "code": "87235",
+          "date_range": "4/9-6/11",
+          "cost": "$385",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "6-8:30pm"
+            }
+          ],
+          "notes": "Materials included",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Teen Chef",
+          "type": "drop-in",
+          "category": "Education",
+          "activity": "Cooking",
+          "ages": "12-17",
+          "code": "87240",
+          "date_range": "4/8-6/10",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "4-5:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        }
+      ]
     },
     {
       "id": "center-langston-hughes-cultural-arts-center",
@@ -321,7 +633,179 @@
         "saturday": "closed"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/miller-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Adult Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "18 and Older",
+          "code": "87701",
+          "date_range": "4/8-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wed/Fri",
+              "time": "11:30am-1:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Badminton Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Badminton",
+          "ages": "18 and Older",
+          "code": "87705",
+          "date_range": "4/11-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Friday",
+              "time": "6-8pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87710",
+          "date_range": "4/6-6/8",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "11:30am-1:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Volleyball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Volleyball",
+          "ages": "18 and Older",
+          "code": "87715",
+          "date_range": "4/9-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "6-8pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Wrestling — Middle School",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Wrestling",
+          "ages": "11-14",
+          "code": "87720",
+          "date_range": "4/6-6/10",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Tue",
+              "time": "4-5:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Hatha Yoga",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Yoga",
+          "ages": "18 and Older",
+          "code": "87725",
+          "date_range": "4/8-6/11",
+          "cost": "$60",
+          "sessions": [
+            {
+              "day": "Wed/Thu",
+              "time": "10-11:15am"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Watercolor Painting",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Painting",
+          "ages": "16 and Older",
+          "code": "87730",
+          "date_range": "4/6-6/8",
+          "cost": "$165",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "10am-12:30pm"
+            }
+          ],
+          "notes": "Materials included",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Cardio Dance Party",
+          "type": "program",
+          "category": "Dance",
+          "activity": "Dance Fitness",
+          "ages": "18 and Older",
+          "code": "87735",
+          "date_range": "4/11-6/13",
+          "cost": "$10",
+          "sessions": [
+            {
+              "day": "Friday",
+              "time": "5:30-6:30pm"
+            }
+          ],
+          "notes": "$10 per class, drop-in",
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Wheelchair Sports",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Wheelchair Sports",
+          "ages": "10 and Older",
+          "code": "87740",
+          "date_range": "4/7-6/9",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "5-7pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        }
+      ]
     },
     {
       "id": "center-meadowbrook-community-center",
@@ -495,7 +979,183 @@
         "friday": "9am-8pm"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/northgate-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Fitness Room",
+          "type": "drop-in",
+          "category": "Fitness",
+          "activity": "Fitness Room",
+          "ages": "18 and Older",
+          "code": "87901",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Fri",
+              "time": "9am-8pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87905",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Fri",
+              "time": "10am-Noon"
+            },
+            {
+              "day": "Wednesday",
+              "time": "5:30-7:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Ping-Pong / Table Tennis",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Table Tennis",
+          "ages": "7 and Older",
+          "code": "87910",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Fri",
+              "time": "9am-8pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Jam Session",
+          "type": "drop-in",
+          "category": "Music & Theater",
+          "activity": "Jam Session",
+          "ages": "10 and Older",
+          "code": "87915",
+          "date_range": "4/9-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "6-8pm"
+            }
+          ],
+          "notes": "Bring your own instrument",
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Acrylic Painting",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Painting",
+          "ages": "18 and Older",
+          "code": "87920",
+          "date_range": "4/7-6/9",
+          "cost": "$150",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": "Materials included",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Gentle Flow Yoga",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Yoga",
+          "ages": "18 and Older",
+          "code": "87925",
+          "date_range": "4/8-6/11",
+          "cost": "$75",
+          "sessions": [
+            {
+              "day": "Wed/Thu",
+              "time": "10-11am"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Goju-Ryu Karate",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Karate",
+          "ages": "14 and Older",
+          "code": "87930",
+          "date_range": "4/6-6/8",
+          "cost": "$50",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "6-7:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Kendo",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Kendo",
+          "ages": "10 and Older",
+          "code": "87935",
+          "date_range": "4/8-6/10",
+          "cost": "$50",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "6-7:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Mandarin — Beginners",
+          "type": "program",
+          "category": "Education",
+          "activity": "Language",
+          "ages": "18 and Older",
+          "code": "87940",
+          "date_range": "4/9-6/11",
+          "cost": "$160",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "6-7:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-queen-anne-community-center",
@@ -515,7 +1175,168 @@
         "saturday": "8am-5pm"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/queen-anne-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "All Ages",
+          "code": "88001",
+          "date_range": "4/7-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "6-8pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "All Ages",
+          "code": "88005",
+          "date_range": "4/6-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Wed",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Fitness Room",
+          "type": "drop-in",
+          "category": "Fitness",
+          "activity": "Fitness Room",
+          "ages": "18 and Older",
+          "code": "88010",
+          "date_range": "4/6-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Fri",
+              "time": "9am-8pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "9am-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "English Conversation Circle",
+          "type": "drop-in",
+          "category": "Education",
+          "activity": "Language",
+          "ages": "18 and Older",
+          "code": "88015",
+          "date_range": "4/7-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "10-11:30am"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Intro to Pottery",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Pottery",
+          "ages": "10 and Older",
+          "code": "88020",
+          "date_range": "4/6-6/8",
+          "cost": "$500",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "6-9pm"
+            }
+          ],
+          "notes": "Materials included",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Traditional Non-Contact Tae Kwon Do",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Tae Kwon Do",
+          "ages": "6 and Older",
+          "code": "88025",
+          "date_range": "4/6-6/11",
+          "cost": "$56",
+          "sessions": [
+            {
+              "day": "Mon/Wed",
+              "time": "5-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Vinyasa Yoga",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Yoga",
+          "ages": "18 and Older",
+          "code": "88030",
+          "date_range": "4/7-6/9",
+          "cost": "$90",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "9:30-10:45am"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pilates",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Pilates",
+          "ages": "18 and Older",
+          "code": "88035",
+          "date_range": "4/6-6/8",
+          "cost": "$150",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "9:30-10:30am"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-delridge-community-center",
@@ -535,7 +1356,180 @@
         "saturday": "9:30 AM - 6:00 PM"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/delridge-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Open Gym (Basketball)",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "10 and Older",
+          "code": "86881",
+          "date_range": "4/6-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "4:15-7:45pm"
+            },
+            {
+              "day": "Tuesday",
+              "time": "12:30-4:45pm"
+            },
+            {
+              "day": "Thursday",
+              "time": "12:30-4:30pm"
+            },
+            {
+              "day": "Friday",
+              "time": "1:15-4:45pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "3-5:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "86891",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Wed/Fri",
+              "time": "9-11am"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Volleyball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Volleyball",
+          "ages": "18 and Older",
+          "code": "86893",
+          "date_range": "4/5-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "12:30-2:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Fitness Room",
+          "type": "drop-in",
+          "category": "Fitness",
+          "activity": "Fitness Room",
+          "ages": "16 and Older",
+          "code": "86895",
+          "date_range": "4/6-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Fri",
+              "time": "8:30am-8pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "9:30am-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Mahjong Drop-In",
+          "type": "drop-in",
+          "category": "Social & Games",
+          "activity": "Mahjong",
+          "ages": "18 and Older",
+          "code": "86897",
+          "date_range": "4/11-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Friday",
+              "time": "1-4pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Karate: The Empty Hand — Beginner",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Karate",
+          "ages": "6-10",
+          "code": "86850",
+          "date_range": "4/7-6/11",
+          "cost": "$68",
+          "sessions": [
+            {
+              "day": "Mon/Wed",
+              "time": "5-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Tap and Jazz: Intermediate",
+          "type": "program",
+          "category": "Dance",
+          "activity": "Tap/Jazz",
+          "ages": "18 and Older",
+          "code": "86860",
+          "date_range": "4/7-6/9",
+          "cost": "$78",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "6-7pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Little Hoopers",
+          "type": "program",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "5-6",
+          "code": "86840",
+          "date_range": "4/8-5/13",
+          "cost": "$63",
+          "sessions": [
+            {
+              "day": "Tue/Fri",
+              "time": "5:15-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-high-point-community-center",
@@ -555,7 +1549,172 @@
         "saturday": "9:00 AM - 5:00 PM"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/high-point-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Open Gym — Adult",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Open Gym",
+          "ages": "18 and Older",
+          "code": "87101",
+          "date_range": "4/6-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Tue/Thu/Fri",
+              "time": "11am-2pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "9am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87110",
+          "date_range": "4/8-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wed/Fri",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Open Gym — Youth",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Open Gym",
+          "ages": "10-18",
+          "code": "87105",
+          "date_range": "4/6-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Fri",
+              "time": "3-5pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "Noon-3pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Tang Soo Do Karate",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Karate",
+          "ages": "10 and Older",
+          "code": "87120",
+          "date_range": "4/7-6/11",
+          "cost": "$165",
+          "sessions": [
+            {
+              "day": "Mon/Wed",
+              "time": "6-7:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "West Seattle Tae Kwon Do",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Tae Kwon Do",
+          "ages": "18 and Older",
+          "code": "87125",
+          "date_range": "4/7-6/14",
+          "cost": "$46",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "6-7pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "10-11am"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Piano Instruction",
+          "type": "program",
+          "category": "Music & Theater",
+          "activity": "Piano",
+          "ages": "6 and Older",
+          "code": "87130",
+          "date_range": "4/9-6/11",
+          "cost": "$35",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "3:30-6pm"
+            }
+          ],
+          "notes": "$35 per 30-minute session",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Little Hoopers",
+          "type": "program",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "3-5",
+          "code": "87135",
+          "date_range": "4/7-5/12",
+          "cost": "$60",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "5:15-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Tap and Jazz: Beginner",
+          "type": "program",
+          "category": "Dance",
+          "activity": "Tap/Jazz",
+          "ages": "5-9",
+          "code": "87140",
+          "date_range": "4/6-6/8",
+          "cost": "$78",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "5-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-loyal-heights-community-center",
@@ -729,7 +1888,160 @@
         "saturday": "830am-5pm"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/yesler-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Open Gym — Youth",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Open Gym",
+          "ages": "12-18",
+          "code": "88101",
+          "date_range": "4/8-6/10",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "3-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Open Gym — All Ages",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Open Gym",
+          "ages": "All Ages",
+          "code": "88105",
+          "date_range": "4/11-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Friday",
+              "time": "3-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "88110",
+          "date_range": "4/7-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Ping-Pong / Table Tennis",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Table Tennis",
+          "ages": "18 and Older",
+          "code": "88115",
+          "date_range": "4/5-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Board Games Drop-In",
+          "type": "drop-in",
+          "category": "Social & Games",
+          "activity": "Board Games",
+          "ages": "7 and Older",
+          "code": "88120",
+          "date_range": "4/5-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "Noon-3pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Cardio Dance",
+          "type": "program",
+          "category": "Dance",
+          "activity": "Cardio Dance",
+          "ages": "18 and Older",
+          "code": "88125",
+          "date_range": "4/8-6/10",
+          "cost": "$42",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "5:30-6:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Drumming Circle",
+          "type": "program",
+          "category": "Music & Theater",
+          "activity": "Drumming",
+          "ages": "16 and Older",
+          "code": "88130",
+          "date_range": "4/11-6/13",
+          "cost": "$52",
+          "sessions": [
+            {
+              "day": "Friday",
+              "time": "5:30-6:30pm"
+            }
+          ],
+          "notes": "Drums provided",
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Hip Hop Dance",
+          "type": "program",
+          "category": "Dance",
+          "activity": "Hip Hop",
+          "ages": "18 and Older",
+          "code": "88135",
+          "date_range": "4/5-6/14",
+          "cost": "$42",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "1-2pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-ravenna-eckstein-community-center",
@@ -941,7 +2253,187 @@
         "saturday": "10am-5pm"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/magnuson-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Adult Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "18 and Older",
+          "code": "88301",
+          "date_range": "4/6-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Tue/Wed/Fri",
+              "time": "6-8:30pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "10am-1pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Badminton Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Badminton",
+          "ages": "18 and Older",
+          "code": "88305",
+          "date_range": "4/6-6/8",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "2-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "88310",
+          "date_range": "4/9-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "9am-Noon"
+            },
+            {
+              "day": "Saturday",
+              "time": "1-3pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Mahjong Drop-In",
+          "type": "drop-in",
+          "category": "Social & Games",
+          "activity": "Mahjong",
+          "ages": "18 and Older",
+          "code": "88315",
+          "date_range": "4/8-6/10",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "9am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Teen Volleyball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Volleyball",
+          "ages": "12-17",
+          "code": "88320",
+          "date_range": "4/11-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Friday",
+              "time": "6-8pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Table Tennis Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Table Tennis",
+          "ages": "18 and Older",
+          "code": "88325",
+          "date_range": "4/5-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "3-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Shorin-Ryu Karate",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Karate",
+          "ages": "9 and Older",
+          "code": "88330",
+          "date_range": "4/7-6/11",
+          "cost": "$90",
+          "sessions": [
+            {
+              "day": "Mon/Wed",
+              "time": "6-7:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Little Hoopers Basketball",
+          "type": "program",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "5-7",
+          "code": "88335",
+          "date_range": "4/8-5/13",
+          "cost": "$60",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "4-4:45pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Table Tennis: Skills & Drills — Adult",
+          "type": "program",
+          "category": "Sports / Open Gym",
+          "activity": "Table Tennis",
+          "ages": "18 and Older",
+          "code": "88340",
+          "date_range": "4/5-6/14",
+          "cost": "$96",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "1-2:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-ballard-community-center",
@@ -1167,7 +2659,183 @@
         "saturday": "closed"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/montlake-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Adult Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "18 and Older",
+          "code": "87801",
+          "date_range": "4/8-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wed/Thu",
+              "time": "11:30am-1:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87805",
+          "date_range": "4/7-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "10am-Noon"
+            },
+            {
+              "day": "Saturday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Volleyball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Volleyball",
+          "ages": "18 and Older",
+          "code": "87810",
+          "date_range": "4/9-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "6-8pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Badminton Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Badminton",
+          "ages": "18 and Older",
+          "code": "87815",
+          "date_range": "4/6-6/8",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Dodgeball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Dodgeball",
+          "ages": "18 and Older",
+          "code": "87820",
+          "date_range": "4/7-6/9",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "6-8pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Table Tennis Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Table Tennis",
+          "ages": "All Ages",
+          "code": "87825",
+          "date_range": "4/8-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wed/Fri",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Mahjong Drop-In",
+          "type": "drop-in",
+          "category": "Social & Games",
+          "activity": "Mahjong",
+          "ages": "18 and Older",
+          "code": "87830",
+          "date_range": "4/9-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "1-3pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Community Dance Fitness",
+          "type": "program",
+          "category": "Dance",
+          "activity": "Dance Fitness",
+          "ages": "18 and Older",
+          "code": "87835",
+          "date_range": "4/7-6/9",
+          "cost": "$40",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "5:15-6:15pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Hooked on Crochet",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Crochet",
+          "ages": "16 and Older",
+          "code": "87840",
+          "date_range": "4/9-6/11",
+          "cost": "$135",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "6-8pm"
+            }
+          ],
+          "notes": "Materials included for first project",
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-international-district-community-center",
@@ -1187,7 +2855,191 @@
         "saturday": "9:00 AM - 5:00 PM"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/international-district/chinatown-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Adult Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "18 and Older",
+          "code": "87501",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Wed/Fri",
+              "time": "5:30-8:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Badminton Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Badminton",
+          "ages": "18 and Older",
+          "code": "87505",
+          "date_range": "4/7-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "2-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87510",
+          "date_range": "4/6-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "11am-1pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "9am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Volleyball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Volleyball",
+          "ages": "18 and Older",
+          "code": "87515",
+          "date_range": "4/8-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "5:30-8:30pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "1-3pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Table Tennis Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Table Tennis",
+          "ages": "18 and Older",
+          "code": "87520",
+          "date_range": "4/6-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Wed/Fri",
+              "time": "11am-1pm"
+            },
+            {
+              "day": "Saturday",
+              "time": "9am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Chinese Mahjong & Chess",
+          "type": "drop-in",
+          "category": "Social & Games",
+          "activity": "Mahjong",
+          "ages": "50 and Older",
+          "code": "87525",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Fri",
+              "time": "9:30am-4pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Gentle Yoga",
+          "type": "drop-in",
+          "category": "Fitness",
+          "activity": "Yoga",
+          "ages": "18 and Older",
+          "code": "87530",
+          "date_range": "4/9-6/12",
+          "cost": "$3",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "11:30am-12:30pm"
+            }
+          ],
+          "notes": "$3 per session",
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "8 Animals/8 Methods Kung-Fu",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Kung Fu",
+          "ages": "12 and Older",
+          "code": "87535",
+          "date_range": "4/5-6/14",
+          "cost": "$78",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "9-10:30am"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Zumba",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Zumba",
+          "ages": "16 and Older",
+          "code": "87540",
+          "date_range": "4/5-6/14",
+          "cost": "$65",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "10:30am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-green-lake-community-center",
@@ -1380,7 +3232,141 @@
         "saturday": "9:00 AM - 5:00 PM"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/van-asselt-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Youth Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "11-17",
+          "code": "87401",
+          "date_range": "4/6-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Thu",
+              "time": "4-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Senior Pickleball",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "50 and Older",
+          "code": "87405",
+          "date_range": "4/6-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Wed",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Mahjong Etc.",
+          "type": "drop-in",
+          "category": "Social & Games",
+          "activity": "Mahjong",
+          "ages": "18 and Older",
+          "code": "87410",
+          "date_range": "4/7-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "Noon-3pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Women's Rhythm & Fitness",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Dance Fitness",
+          "ages": "16 and Older",
+          "code": "87415",
+          "date_range": "4/7-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "10-11am"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "B-Ball and Talk",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "10-17",
+          "code": "87420",
+          "date_range": "4/6-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Thu",
+              "time": "3-4pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Teen Cooking",
+          "type": "drop-in",
+          "category": "Education",
+          "activity": "Cooking",
+          "ages": "12-17",
+          "code": "87425",
+          "date_range": "4/8-6/10",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "4-5:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Young Ladies Live",
+          "type": "program",
+          "category": "Education",
+          "activity": "Youth Development",
+          "ages": "12-18",
+          "code": "87430",
+          "date_range": "4/6-6/8",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "4-5:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        }
+      ]
     },
     {
       "id": "center-hiawatha-community-center",
@@ -1400,7 +3386,107 @@
         "saturday": "closed"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/hiawatha-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Adult Badminton Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Badminton",
+          "ages": "18 and Older",
+          "code": "87001",
+          "date_range": "4/7-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "10am-1pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Adult Volleyball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Volleyball",
+          "ages": "18 and Older",
+          "code": "87005",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Wed/Fri",
+              "time": "10am-1pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Open Gym (Basketball)",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "10 and Older",
+          "code": "87010",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Fri",
+              "time": "2-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87015",
+          "date_range": "4/7-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "1-3pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Fitness Room",
+          "type": "drop-in",
+          "category": "Fitness",
+          "activity": "Fitness Room",
+          "ages": "18 and Older",
+          "code": "87020",
+          "date_range": "4/6-6/13",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Wed/Fri",
+              "time": "10am-2pm"
+            },
+            {
+              "day": "Tue/Thu",
+              "time": "10am-2pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        }
+      ]
     },
     {
       "id": "center-rainier-beach-community-center",
@@ -1420,7 +3506,187 @@
         "saturday": "8:30 AM 7:00 PM"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/rainier-beach-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Fitness Room",
+          "type": "drop-in",
+          "category": "Fitness",
+          "activity": "Fitness Room",
+          "ages": "18 and Older",
+          "code": "87301",
+          "date_range": "4/6-6/15",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon-Thu",
+              "time": "8:30am-9pm"
+            },
+            {
+              "day": "Fri/Sat",
+              "time": "8:30am-7pm"
+            },
+            {
+              "day": "Sunday",
+              "time": "9am-7pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87305",
+          "date_range": "4/5-6/15",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Sunday",
+              "time": "1-3pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Volleyball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Volleyball",
+          "ages": "18 and Older",
+          "code": "87310",
+          "date_range": "4/5-6/15",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Sunday",
+              "time": "3-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Family Zumba",
+          "type": "drop-in",
+          "category": "Fitness",
+          "activity": "Zumba",
+          "ages": "14 and Older",
+          "code": "87315",
+          "date_range": "4/8-6/10",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Wednesday",
+              "time": "5:30-6:30pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Detective Cookie's Chess Club",
+          "type": "drop-in",
+          "category": "Social & Games",
+          "activity": "Chess",
+          "ages": "7-19",
+          "code": "87320",
+          "date_range": "4/5-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Goju Ryu Karate",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Karate",
+          "ages": "6 and Older",
+          "code": "87325",
+          "date_range": "4/7-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Wed",
+              "time": "5:30-7pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Beginner Guitar",
+          "type": "program",
+          "category": "Music & Theater",
+          "activity": "Guitar",
+          "ages": "8-12",
+          "code": "87330",
+          "date_range": "4/6-6/8",
+          "cost": "$81",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "5-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Mixxed Fit",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Dance Fitness",
+          "ages": "18 and Older",
+          "code": "87335",
+          "date_range": "4/7-6/9",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "6-7pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Ukulele: Beginner",
+          "type": "program",
+          "category": "Music & Theater",
+          "activity": "Ukulele",
+          "ages": "5-12",
+          "code": "87340",
+          "date_range": "4/6-6/8",
+          "cost": "$68",
+          "sessions": [
+            {
+              "day": "Monday",
+              "time": "4-5pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-magnolia-community-center",
@@ -1440,7 +3706,160 @@
         "saturday": "closed"
       },
       "website": "https://www.seattle.gov/parks/all-community-centers/magnolia-community-center",
-      "events": []
+      "events": [
+        {
+          "season": "Spring 2026",
+          "program": "Men's Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "18 and Older",
+          "code": "87601",
+          "date_range": "4/7-6/9",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "7-9pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Women's Basketball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "18 and Older",
+          "code": "87605",
+          "date_range": "4/9-6/11",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Thursday",
+              "time": "7-9pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pickleball Drop-In — Adult",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Pickleball",
+          "ages": "18 and Older",
+          "code": "87610",
+          "date_range": "4/6-6/12",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Mon/Thu",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Volleyball Drop-In",
+          "type": "drop-in",
+          "category": "Sports / Open Gym",
+          "activity": "Volleyball",
+          "ages": "16 and Older",
+          "code": "87615",
+          "date_range": "4/5-6/14",
+          "cost": "FREE",
+          "sessions": [
+            {
+              "day": "Saturday",
+              "time": "10am-Noon"
+            }
+          ],
+          "notes": null,
+          "registration_required": false
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Gentle Yoga & Meditation",
+          "type": "program",
+          "category": "Fitness",
+          "activity": "Yoga",
+          "ages": "12 and Older",
+          "code": "87620",
+          "date_range": "4/7-6/9",
+          "cost": "$60",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "9:30-10:30am"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Little Hoopers",
+          "type": "program",
+          "category": "Sports / Open Gym",
+          "activity": "Basketball",
+          "ages": "6-8",
+          "code": "87625",
+          "date_range": "4/7-5/12",
+          "cost": "$90",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "5:30-6:15pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Tae Kwon Do — All Levels",
+          "type": "program",
+          "category": "Martial Arts",
+          "activity": "Tae Kwon Do",
+          "ages": "7 and Older",
+          "code": "87630",
+          "date_range": "4/7-6/12",
+          "cost": "$55",
+          "sessions": [
+            {
+              "day": "Tue/Thu",
+              "time": "5-6pm"
+            }
+          ],
+          "notes": null,
+          "registration_required": true
+        },
+        {
+          "season": "Spring 2026",
+          "program": "Pottery: Beginner/Intermediate",
+          "type": "program",
+          "category": "Arts & Crafts",
+          "activity": "Pottery",
+          "ages": "18 and Older",
+          "code": "87635",
+          "date_range": "4/7-6/9",
+          "cost": "$500",
+          "sessions": [
+            {
+              "day": "Tuesday",
+              "time": "6:30-9pm"
+            }
+          ],
+          "notes": "Materials included",
+          "registration_required": true
+        }
+      ]
     },
     {
       "id": "center-south-park-community-center",

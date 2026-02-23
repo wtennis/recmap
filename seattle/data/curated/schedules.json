@@ -22,7 +22,12 @@
       "code": "85080",
       "date_range": "4/6-6/15",
       "cost": "FREE",
-      "sessions": [{ "day": "Monday", "time": "6:15-8:45pm" }],
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "6:15-8:45pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -41,7 +46,12 @@
       "code": "85120",
       "date_range": "4/6-6/15",
       "cost": "FREE",
-      "sessions": [{ "day": "Wednesday", "time": "10am-Noon" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "10am-Noon"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -60,7 +70,12 @@
       "code": "85125",
       "date_range": "4/6-6/15",
       "cost": "FREE",
-      "sessions": [{ "day": "Thursday", "time": "6:30-8:45pm" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6:30-8:45pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -79,7 +94,12 @@
       "code": "85200",
       "date_range": "4/7-6/9",
       "cost": "$88",
-      "sessions": [{ "day": "Tuesday", "time": "10-11am" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "10-11am"
+        }
+      ],
       "notes": "Bring your own mat",
       "registration_required": true
     },
@@ -98,7 +118,12 @@
       "code": "85210",
       "date_range": "4/8-6/10",
       "cost": "$72",
-      "sessions": [{ "day": "Wednesday", "time": "1-2pm" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "1-2pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -117,7 +142,12 @@
       "code": "85300",
       "date_range": "4/9-6/11",
       "cost": "$145",
-      "sessions": [{ "day": "Thursday", "time": "10am-Noon" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "10am-Noon"
+        }
+      ],
       "notes": "Materials fee $25 payable to instructor",
       "registration_required": true
     },
@@ -136,7 +166,12 @@
       "code": "85091",
       "date_range": "4/5-6/14",
       "cost": "FREE",
-      "sessions": [{ "day": "Sunday", "time": "1-2:45pm" }],
+      "sessions": [
+        {
+          "day": "Sunday",
+          "time": "1-2:45pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -155,7 +190,12 @@
       "code": "85400",
       "date_range": "4/10-6/12",
       "cost": "$66",
-      "sessions": [{ "day": "Friday", "time": "7-8:30pm" }],
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "7-8:30pm"
+        }
+      ],
       "notes": "No partner needed",
       "registration_required": true
     },
@@ -174,18 +214,22 @@
       "code": "85500",
       "date_range": "4/7-6/9",
       "cost": "$44",
-      "sessions": [{ "day": "Tuesday", "time": "1-3pm" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "1-3pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
-
     {
       "season": "Spring 2026",
       "center": "Garfield Community Center",
       "address": "2323 E Cherry St, Seattle, WA 98122",
       "phone": "206-684-4788",
-      "zone": 1,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
       "type": "drop-in",
       "category": "Sports / Open Gym",
       "activity": "Basketball",
@@ -194,7 +238,12 @@
       "code": "85651",
       "date_range": "4/6-6/15",
       "cost": "FREE",
-      "sessions": [{ "day": "Tue/Thu", "time": "12:30-3:30pm" }],
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "12:30-3:30pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -203,8 +252,8 @@
       "center": "Garfield Community Center",
       "address": "2323 E Cherry St, Seattle, WA 98122",
       "phone": "206-684-4788",
-      "zone": 1,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
       "type": "drop-in",
       "category": "Sports / Open Gym",
       "activity": "Basketball",
@@ -213,7 +262,12 @@
       "code": "85652",
       "date_range": "4/8-6/10",
       "cost": "FREE",
-      "sessions": [{ "day": "Wednesday", "time": "6-8pm" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "6-8pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -222,8 +276,8 @@
       "center": "Garfield Community Center",
       "address": "2323 E Cherry St, Seattle, WA 98122",
       "phone": "206-684-4788",
-      "zone": 1,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
       "type": "program",
       "category": "Fitness",
       "activity": "Zumba",
@@ -232,7 +286,12 @@
       "code": "85660",
       "date_range": "4/6-6/8",
       "cost": "$80",
-      "sessions": [{ "day": "Monday", "time": "6-7pm" }],
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "6-7pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -241,8 +300,8 @@
       "center": "Garfield Community Center",
       "address": "2323 E Cherry St, Seattle, WA 98122",
       "phone": "206-684-4788",
-      "zone": 1,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
       "type": "program",
       "category": "Fitness",
       "activity": "Cardio",
@@ -251,7 +310,12 @@
       "code": "85665",
       "date_range": "4/9-6/11",
       "cost": "$88",
-      "sessions": [{ "day": "Thursday", "time": "6-7pm" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-7pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -260,8 +324,8 @@
       "center": "Garfield Community Center",
       "address": "2323 E Cherry St, Seattle, WA 98122",
       "phone": "206-684-4788",
-      "zone": 1,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
       "type": "program",
       "category": "Dance",
       "activity": "Hip Hop",
@@ -270,7 +334,12 @@
       "code": "85670",
       "date_range": "4/7-6/9",
       "cost": "$72",
-      "sessions": [{ "day": "Tuesday", "time": "4:30-5:30pm" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "4:30-5:30pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -279,8 +348,8 @@
       "center": "Garfield Community Center",
       "address": "2323 E Cherry St, Seattle, WA 98122",
       "phone": "206-684-4788",
-      "zone": 1,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
       "type": "program",
       "category": "Martial Arts",
       "activity": "Karate",
@@ -289,7 +358,12 @@
       "code": "85680",
       "date_range": "4/8-6/10",
       "cost": "$96",
-      "sessions": [{ "day": "Wed/Fri", "time": "5-6:30pm" }],
+      "sessions": [
+        {
+          "day": "Wed/Fri",
+          "time": "5-6:30pm"
+        }
+      ],
       "notes": "Uniform required after first month",
       "registration_required": true
     },
@@ -298,8 +372,8 @@
       "center": "Garfield Community Center",
       "address": "2323 E Cherry St, Seattle, WA 98122",
       "phone": "206-684-4788",
-      "zone": 1,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
       "type": "drop-in",
       "category": "Sports / Open Gym",
       "activity": "Open Gym",
@@ -308,7 +382,12 @@
       "code": "85690",
       "date_range": "4/11-6/13",
       "cost": "FREE",
-      "sessions": [{ "day": "Saturday", "time": "10am-Noon" }],
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "10am-Noon"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -317,8 +396,8 @@
       "center": "Garfield Community Center",
       "address": "2323 E Cherry St, Seattle, WA 98122",
       "phone": "206-684-4788",
-      "zone": 1,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
       "type": "program",
       "category": "Education",
       "activity": "Computer Classes",
@@ -327,18 +406,22 @@
       "code": "85695",
       "date_range": "4/7-6/9",
       "cost": "$40",
-      "sessions": [{ "day": "Tuesday", "time": "10-11:30am" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "10-11:30am"
+        }
+      ],
       "notes": "Laptops provided",
       "registration_required": true
     },
-
     {
       "season": "Spring 2026",
       "center": "Rainier Community Center",
       "address": "4600 38th Ave S, Seattle, WA 98118",
       "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
       "type": "drop-in",
       "category": "Sports / Open Gym",
       "activity": "Basketball",
@@ -347,104 +430,11 @@
       "code": "86001",
       "date_range": "4/6-6/15",
       "cost": "FREE",
-      "sessions": [{ "day": "Mon/Wed", "time": "6:30-8:30pm" }],
-      "notes": null,
-      "registration_required": false
-    },
-    {
-      "season": "Spring 2026",
-      "center": "Rainier Community Center",
-      "address": "4600 38th Ave S, Seattle, WA 98118",
-      "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
-      "type": "drop-in",
-      "category": "Sports / Open Gym",
-      "activity": "Badminton",
-      "program": "Badminton Drop-In",
-      "ages": "All Ages",
-      "code": "86010",
-      "date_range": "4/7-6/9",
-      "cost": "FREE",
-      "sessions": [{ "day": "Tuesday", "time": "6:30-8:30pm" }],
-      "notes": "Rackets available to borrow",
-      "registration_required": false
-    },
-    {
-      "season": "Spring 2026",
-      "center": "Rainier Community Center",
-      "address": "4600 38th Ave S, Seattle, WA 98118",
-      "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
-      "type": "program",
-      "category": "Fitness",
-      "activity": "Yoga",
-      "program": "Power Yoga",
-      "ages": "18 and Older",
-      "code": "86020",
-      "date_range": "4/8-6/10",
-      "cost": "$96",
-      "sessions": [{ "day": "Wednesday", "time": "9-10am" }],
-      "notes": null,
-      "registration_required": true
-    },
-    {
-      "season": "Spring 2026",
-      "center": "Rainier Community Center",
-      "address": "4600 38th Ave S, Seattle, WA 98118",
-      "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
-      "type": "program",
-      "category": "Fitness",
-      "activity": "Pilates",
-      "program": "Mat Pilates",
-      "ages": "18 and Older",
-      "code": "86025",
-      "date_range": "4/10-6/12",
-      "cost": "$88",
-      "sessions": [{ "day": "Friday", "time": "10-11am" }],
-      "notes": "Bring your own mat",
-      "registration_required": true
-    },
-    {
-      "season": "Spring 2026",
-      "center": "Rainier Community Center",
-      "address": "4600 38th Ave S, Seattle, WA 98118",
-      "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
-      "type": "program",
-      "category": "Aquatics",
-      "activity": "Swim Lessons",
-      "program": "Youth Swim Lessons — Level 2",
-      "ages": "6-12",
-      "code": "86030",
-      "date_range": "4/6-6/8",
-      "cost": "$75",
-      "sessions": [{ "day": "Monday", "time": "4-4:45pm" }],
-      "notes": null,
-      "registration_required": true
-    },
-    {
-      "season": "Spring 2026",
-      "center": "Rainier Community Center",
-      "address": "4600 38th Ave S, Seattle, WA 98118",
-      "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
-      "type": "drop-in",
-      "category": "Aquatics",
-      "activity": "Lap Swim",
-      "program": "Lap Swim",
-      "ages": "18 and Older",
-      "code": "86035",
-      "date_range": "4/6-6/15",
-      "cost": "FREE",
       "sessions": [
-        { "day": "Mon-Fri", "time": "6-8am" },
-        { "day": "Saturday", "time": "8-10am" }
+        {
+          "day": "Mon/Wed",
+          "time": "6:30-8:30pm"
+        }
       ],
       "notes": null,
       "registration_required": false
@@ -454,8 +444,132 @@
       "center": "Rainier Community Center",
       "address": "4600 38th Ave S, Seattle, WA 98118",
       "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Badminton",
+      "program": "Badminton Drop-In",
+      "ages": "All Ages",
+      "code": "86010",
+      "date_range": "4/7-6/9",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "6:30-8:30pm"
+        }
+      ],
+      "notes": "Rackets available to borrow",
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Community Center",
+      "address": "4600 38th Ave S, Seattle, WA 98118",
+      "phone": "206-386-1919",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Yoga",
+      "program": "Power Yoga",
+      "ages": "18 and Older",
+      "code": "86020",
+      "date_range": "4/8-6/10",
+      "cost": "$96",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "9-10am"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Community Center",
+      "address": "4600 38th Ave S, Seattle, WA 98118",
+      "phone": "206-386-1919",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Pilates",
+      "program": "Mat Pilates",
+      "ages": "18 and Older",
+      "code": "86025",
+      "date_range": "4/10-6/12",
+      "cost": "$88",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "10-11am"
+        }
+      ],
+      "notes": "Bring your own mat",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Community Center",
+      "address": "4600 38th Ave S, Seattle, WA 98118",
+      "phone": "206-386-1919",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
+      "type": "program",
+      "category": "Aquatics",
+      "activity": "Swim Lessons",
+      "program": "Youth Swim Lessons — Level 2",
+      "ages": "6-12",
+      "code": "86030",
+      "date_range": "4/6-6/8",
+      "cost": "$75",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "4-4:45pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Community Center",
+      "address": "4600 38th Ave S, Seattle, WA 98118",
+      "phone": "206-386-1919",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
+      "type": "drop-in",
+      "category": "Aquatics",
+      "activity": "Lap Swim",
+      "program": "Lap Swim",
+      "ages": "18 and Older",
+      "code": "86035",
+      "date_range": "4/6-6/15",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Fri",
+          "time": "6-8am"
+        },
+        {
+          "day": "Saturday",
+          "time": "8-10am"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Community Center",
+      "address": "4600 38th Ave S, Seattle, WA 98118",
+      "phone": "206-386-1919",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
       "type": "drop-in",
       "category": "Aquatics",
       "activity": "Open Swim",
@@ -464,7 +578,12 @@
       "code": "86040",
       "date_range": "4/5-6/14",
       "cost": "FREE",
-      "sessions": [{ "day": "Sunday", "time": "1-3pm" }],
+      "sessions": [
+        {
+          "day": "Sunday",
+          "time": "1-3pm"
+        }
+      ],
       "notes": "Children under 7 must have adult in water",
       "registration_required": false
     },
@@ -473,8 +592,8 @@
       "center": "Rainier Community Center",
       "address": "4600 38th Ave S, Seattle, WA 98118",
       "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
       "type": "program",
       "category": "Aquatics",
       "activity": "Water Aerobics",
@@ -483,7 +602,12 @@
       "code": "86045",
       "date_range": "4/7-6/9",
       "cost": "$72",
-      "sessions": [{ "day": "Tue/Thu", "time": "9-10am" }],
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "9-10am"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -492,8 +616,8 @@
       "center": "Rainier Community Center",
       "address": "4600 38th Ave S, Seattle, WA 98118",
       "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
       "type": "program",
       "category": "Arts & Crafts",
       "activity": "Painting",
@@ -502,7 +626,12 @@
       "code": "86050",
       "date_range": "4/9-6/11",
       "cost": "$110",
-      "sessions": [{ "day": "Thursday", "time": "1-3pm" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "1-3pm"
+        }
+      ],
       "notes": "Materials included",
       "registration_required": true
     },
@@ -511,8 +640,8 @@
       "center": "Rainier Community Center",
       "address": "4600 38th Ave S, Seattle, WA 98118",
       "phone": "206-386-1919",
-      "zone": 2,
-      "center_hours": "Mon-Fri 10am-9pm, Sat 10am-6pm, Sun 10am-5pm",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-8pm, Fri 9am-7pm, Sat 9am-6pm",
       "type": "program",
       "category": "Martial Arts",
       "activity": "Taekwondo",
@@ -521,11 +650,15 @@
       "code": "86055",
       "date_range": "4/11-6/13",
       "cost": "$96",
-      "sessions": [{ "day": "Saturday", "time": "10-11:30am" }],
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "10-11:30am"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
-
     {
       "season": "Spring 2026",
       "center": "Green Lake Community Center",
@@ -541,7 +674,12 @@
       "code": "86100",
       "date_range": "4/7-6/10",
       "cost": "FREE",
-      "sessions": [{ "day": "Tue/Thu", "time": "11:30am-1:30pm" }],
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "11:30am-1:30pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -560,7 +698,12 @@
       "code": "86105",
       "date_range": "4/6-6/15",
       "cost": "FREE",
-      "sessions": [{ "day": "Mon/Wed/Fri", "time": "9-11am" }],
+      "sessions": [
+        {
+          "day": "Mon/Wed/Fri",
+          "time": "9-11am"
+        }
+      ],
       "notes": "Paddles available to borrow",
       "registration_required": false
     },
@@ -579,7 +722,12 @@
       "code": "86110",
       "date_range": "4/7-6/9",
       "cost": "$96",
-      "sessions": [{ "day": "Tuesday", "time": "9:30-10:45am" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "9:30-10:45am"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -598,7 +746,12 @@
       "code": "86115",
       "date_range": "4/9-6/11",
       "cost": "$80",
-      "sessions": [{ "day": "Thursday", "time": "6-7pm" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-7pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -617,7 +770,12 @@
       "code": "86120",
       "date_range": "4/8-6/10",
       "cost": "$72",
-      "sessions": [{ "day": "Wednesday", "time": "7-8:30pm" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "7-8:30pm"
+        }
+      ],
       "notes": "No partner needed",
       "registration_required": true
     },
@@ -636,7 +794,12 @@
       "code": "86125",
       "date_range": "4/6-6/8",
       "cost": "$88",
-      "sessions": [{ "day": "Monday", "time": "6:30-8:30pm" }],
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "6:30-8:30pm"
+        }
+      ],
       "notes": "Model fee $10 payable to instructor",
       "registration_required": true
     },
@@ -655,7 +818,12 @@
       "code": "86130",
       "date_range": "4/10-6/12",
       "cost": "$110",
-      "sessions": [{ "day": "Friday", "time": "6-7:30pm" }],
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "6-7:30pm"
+        }
+      ],
       "notes": "Bring your own guitar",
       "registration_required": true
     },
@@ -674,11 +842,15 @@
       "code": "86135",
       "date_range": "4/10-6/12",
       "cost": "FREE",
-      "sessions": [{ "day": "Friday", "time": "5-8pm" }],
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "5-8pm"
+        }
+      ],
       "notes": "Games provided. Bring your favorites!",
       "registration_required": false
     },
-
     {
       "season": "Spring 2026",
       "center": "Bitter Lake Community Center",
@@ -694,7 +866,12 @@
       "code": "84405",
       "date_range": "4/7-5/12",
       "cost": "$66",
-      "sessions": [{ "day": "Tuesday", "time": "5:15-6pm" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "5:15-6pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -713,7 +890,12 @@
       "code": "84410",
       "date_range": "4/7-5/12",
       "cost": "$72",
-      "sessions": [{ "day": "Tuesday", "time": "6-7pm" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "6-7pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -732,7 +914,12 @@
       "code": "84420",
       "date_range": "4/8-6/10",
       "cost": "FREE",
-      "sessions": [{ "day": "Wednesday", "time": "6:30-8:30pm" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "6:30-8:30pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -751,7 +938,12 @@
       "code": "84430",
       "date_range": "4/6-6/8",
       "cost": "$66",
-      "sessions": [{ "day": "Monday", "time": "10-11am" }],
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "10-11am"
+        }
+      ],
       "notes": "Low-impact, suitable for all fitness levels",
       "registration_required": true
     },
@@ -770,7 +962,12 @@
       "code": "84435",
       "date_range": "4/9-6/11",
       "cost": "$72",
-      "sessions": [{ "day": "Thursday", "time": "10-11am" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "10-11am"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -789,7 +986,12 @@
       "code": "84440",
       "date_range": "4/11-6/13",
       "cost": "$130",
-      "sessions": [{ "day": "Saturday", "time": "10am-1pm" }],
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "10am-1pm"
+        }
+      ],
       "notes": "Materials fee $20. Safety glasses provided.",
       "registration_required": true
     },
@@ -808,7 +1010,12 @@
       "code": "84450",
       "date_range": "4/8-6/10",
       "cost": "$80",
-      "sessions": [{ "day": "Wednesday", "time": "4-5:30pm" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "4-5:30pm"
+        }
+      ],
       "notes": "All materials provided",
       "registration_required": true
     },
@@ -827,11 +1034,15 @@
       "code": "84460",
       "date_range": "4/5-6/14",
       "cost": "FREE",
-      "sessions": [{ "day": "Sunday", "time": "Noon-4pm" }],
+      "sessions": [
+        {
+          "day": "Sunday",
+          "time": "Noon-4pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
-
     {
       "season": "Spring 2026",
       "center": "Meadowbrook Community Center",
@@ -847,7 +1058,12 @@
       "code": "86200",
       "date_range": "4/6-6/15",
       "cost": "FREE",
-      "sessions": [{ "day": "Mon/Wed", "time": "10am-Noon" }],
+      "sessions": [
+        {
+          "day": "Mon/Wed",
+          "time": "10am-Noon"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -866,7 +1082,12 @@
       "code": "86205",
       "date_range": "4/7-6/12",
       "cost": "FREE",
-      "sessions": [{ "day": "Tue/Thu", "time": "6:30-8:30pm" }],
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "6:30-8:30pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -885,7 +1106,12 @@
       "code": "86210",
       "date_range": "4/8-6/10",
       "cost": "$66",
-      "sessions": [{ "day": "Wednesday", "time": "10:30-11:30am" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "10:30-11:30am"
+        }
+      ],
       "notes": "Great for limited mobility",
       "registration_required": true
     },
@@ -904,7 +1130,12 @@
       "code": "86220",
       "date_range": "4/11-6/13",
       "cost": "$80",
-      "sessions": [{ "day": "Saturday", "time": "10-11am" }],
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "10-11am"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -923,7 +1154,12 @@
       "code": "86225",
       "date_range": "4/9-6/11",
       "cost": "$96",
-      "sessions": [{ "day": "Thu", "time": "5:30-7pm" }],
+      "sessions": [
+        {
+          "day": "Thu",
+          "time": "5:30-7pm"
+        }
+      ],
       "notes": "Gi required after first month",
       "registration_required": true
     },
@@ -942,11 +1178,15 @@
       "code": "86230",
       "date_range": "4/10-6/12",
       "cost": "$120",
-      "sessions": [{ "day": "Friday", "time": "4-5pm" }],
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "4-5pm"
+        }
+      ],
       "notes": "Keyboard provided during class",
       "registration_required": true
     },
-
     {
       "season": "Spring 2026",
       "center": "Loyal Heights Community Center",
@@ -962,7 +1202,12 @@
       "code": "86300",
       "date_range": "4/6-6/15",
       "cost": "FREE",
-      "sessions": [{ "day": "Monday", "time": "10am-Noon" }],
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "10am-Noon"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -981,7 +1226,12 @@
       "code": "86305",
       "date_range": "4/8-6/10",
       "cost": "FREE",
-      "sessions": [{ "day": "Wednesday", "time": "10am-Noon" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "10am-Noon"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -1000,7 +1250,12 @@
       "code": "86310",
       "date_range": "4/7-6/9",
       "cost": "$88",
-      "sessions": [{ "day": "Tuesday", "time": "9:30-10:30am" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "9:30-10:30am"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -1019,7 +1274,12 @@
       "code": "86315",
       "date_range": "4/9-6/11",
       "cost": "$72",
-      "sessions": [{ "day": "Thursday", "time": "6-6:45pm" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-6:45pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -1038,7 +1298,12 @@
       "code": "86320",
       "date_range": "4/10-6/12",
       "cost": "$110",
-      "sessions": [{ "day": "Friday", "time": "10am-Noon" }],
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "10am-Noon"
+        }
+      ],
       "notes": "Materials included",
       "registration_required": true
     },
@@ -1057,7 +1322,12 @@
       "code": "86325",
       "date_range": "4/11-6/13",
       "cost": "$88",
-      "sessions": [{ "day": "Saturday", "time": "9-10:15am" }],
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "9-10:15am"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -1076,11 +1346,15 @@
       "code": "86330",
       "date_range": "4/10-6/12",
       "cost": "FREE",
-      "sessions": [{ "day": "Friday", "time": "3:30-5pm" }],
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "3:30-5pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
-
     {
       "season": "Spring 2026",
       "center": "Ravenna-Eckstein Community Center",
@@ -1096,7 +1370,12 @@
       "code": "86400",
       "date_range": "4/6-6/8",
       "cost": "FREE",
-      "sessions": [{ "day": "Monday", "time": "11:30am-1:30pm" }],
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "11:30am-1:30pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -1115,7 +1394,12 @@
       "code": "86405",
       "date_range": "4/8-6/10",
       "cost": "FREE",
-      "sessions": [{ "day": "Wednesday", "time": "7-9pm" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "7-9pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
     },
@@ -1134,7 +1418,12 @@
       "code": "86410",
       "date_range": "4/7-6/9",
       "cost": "$88",
-      "sessions": [{ "day": "Tuesday", "time": "6:30-7:45pm" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "6:30-7:45pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -1153,7 +1442,12 @@
       "code": "86415",
       "date_range": "4/9-6/11",
       "cost": "$72",
-      "sessions": [{ "day": "Thursday", "time": "10-11am" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "10-11am"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -1172,7 +1466,12 @@
       "code": "86420",
       "date_range": "4/10-6/12",
       "cost": "$80",
-      "sessions": [{ "day": "Friday", "time": "7-8:30pm" }],
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "7-8:30pm"
+        }
+      ],
       "notes": "No partner needed",
       "registration_required": true
     },
@@ -1191,7 +1490,12 @@
       "code": "86425",
       "date_range": "4/11-6/13",
       "cost": "$96",
-      "sessions": [{ "day": "Saturday", "time": "11am-12:30pm" }],
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "11am-12:30pm"
+        }
+      ],
       "notes": null,
       "registration_required": true
     },
@@ -1210,7 +1514,12 @@
       "code": "86430",
       "date_range": "4/7-6/9",
       "cost": "$96",
-      "sessions": [{ "day": "Tuesday", "time": "10-11:30am" }],
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "10-11:30am"
+        }
+      ],
       "notes": "Textbook required ($25)",
       "registration_required": true
     },
@@ -1229,7 +1538,12 @@
       "code": "86435",
       "date_range": "4/9-6/11",
       "cost": "$88",
-      "sessions": [{ "day": "Thursday", "time": "4-5:30pm" }],
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "4-5:30pm"
+        }
+      ],
       "notes": "Culminates in a short performance",
       "registration_required": true
     },
@@ -1248,9 +1562,3002 @@
       "code": "86440",
       "date_range": "4/8-6/10",
       "cost": "FREE",
-      "sessions": [{ "day": "Wednesday", "time": "5:30-7pm" }],
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "5:30-7pm"
+        }
+      ],
       "notes": null,
       "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Delridge Community Center",
+      "address": "4501 Delridge Way SW, Seattle, WA 98106",
+      "phone": "206-684-7423",
+      "zone": 1,
+      "center_hours": "Mon-Fri 8:30am-8pm, Sat 9:30am-6pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Open Gym (Basketball)",
+      "ages": "10 and Older",
+      "code": "86881",
+      "date_range": "4/6-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "4:15-7:45pm"
+        },
+        {
+          "day": "Tuesday",
+          "time": "12:30-4:45pm"
+        },
+        {
+          "day": "Thursday",
+          "time": "12:30-4:30pm"
+        },
+        {
+          "day": "Friday",
+          "time": "1:15-4:45pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "3-5:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Delridge Community Center",
+      "address": "4501 Delridge Way SW, Seattle, WA 98106",
+      "phone": "206-684-7423",
+      "zone": 1,
+      "center_hours": "Mon-Fri 8:30am-8pm, Sat 9:30am-6pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "86891",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Wed/Fri",
+          "time": "9-11am"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Delridge Community Center",
+      "address": "4501 Delridge Way SW, Seattle, WA 98106",
+      "phone": "206-684-7423",
+      "zone": 1,
+      "center_hours": "Mon-Fri 8:30am-8pm, Sat 9:30am-6pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Volleyball",
+      "program": "Adult Volleyball Drop-In",
+      "ages": "18 and Older",
+      "code": "86893",
+      "date_range": "4/5-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "12:30-2:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Delridge Community Center",
+      "address": "4501 Delridge Way SW, Seattle, WA 98106",
+      "phone": "206-684-7423",
+      "zone": 1,
+      "center_hours": "Mon-Fri 8:30am-8pm, Sat 9:30am-6pm",
+      "type": "drop-in",
+      "category": "Fitness",
+      "activity": "Fitness Room",
+      "program": "Fitness Room",
+      "ages": "16 and Older",
+      "code": "86895",
+      "date_range": "4/6-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Fri",
+          "time": "8:30am-8pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "9:30am-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Delridge Community Center",
+      "address": "4501 Delridge Way SW, Seattle, WA 98106",
+      "phone": "206-684-7423",
+      "zone": 1,
+      "center_hours": "Mon-Fri 8:30am-8pm, Sat 9:30am-6pm",
+      "type": "drop-in",
+      "category": "Social & Games",
+      "activity": "Mahjong",
+      "program": "Mahjong Drop-In",
+      "ages": "18 and Older",
+      "code": "86897",
+      "date_range": "4/11-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "1-4pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Delridge Community Center",
+      "address": "4501 Delridge Way SW, Seattle, WA 98106",
+      "phone": "206-684-7423",
+      "zone": 1,
+      "center_hours": "Mon-Fri 8:30am-8pm, Sat 9:30am-6pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Karate",
+      "program": "Karate: The Empty Hand — Beginner",
+      "ages": "6-10",
+      "code": "86850",
+      "date_range": "4/7-6/11",
+      "cost": "$68",
+      "sessions": [
+        {
+          "day": "Mon/Wed",
+          "time": "5-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Delridge Community Center",
+      "address": "4501 Delridge Way SW, Seattle, WA 98106",
+      "phone": "206-684-7423",
+      "zone": 1,
+      "center_hours": "Mon-Fri 8:30am-8pm, Sat 9:30am-6pm",
+      "type": "program",
+      "category": "Dance",
+      "activity": "Tap/Jazz",
+      "program": "Tap and Jazz: Intermediate",
+      "ages": "18 and Older",
+      "code": "86860",
+      "date_range": "4/7-6/9",
+      "cost": "$78",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "6-7pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Delridge Community Center",
+      "address": "4501 Delridge Way SW, Seattle, WA 98106",
+      "phone": "206-684-7423",
+      "zone": 1,
+      "center_hours": "Mon-Fri 8:30am-8pm, Sat 9:30am-6pm",
+      "type": "program",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Little Hoopers",
+      "ages": "5-6",
+      "code": "86840",
+      "date_range": "4/8-5/13",
+      "cost": "$63",
+      "sessions": [
+        {
+          "day": "Tue/Fri",
+          "time": "5:15-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Hiawatha Community Center",
+      "address": "2700 California Ave SW, Seattle, WA 98116",
+      "phone": "206-684-7441",
+      "zone": 1,
+      "center_hours": "Mon-Thu 10am-7pm, Fri 11am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Badminton",
+      "program": "Adult Badminton Drop-In",
+      "ages": "18 and Older",
+      "code": "87001",
+      "date_range": "4/7-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "10am-1pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Hiawatha Community Center",
+      "address": "2700 California Ave SW, Seattle, WA 98116",
+      "phone": "206-684-7441",
+      "zone": 1,
+      "center_hours": "Mon-Thu 10am-7pm, Fri 11am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Volleyball",
+      "program": "Adult Volleyball Drop-In",
+      "ages": "18 and Older",
+      "code": "87005",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Wed/Fri",
+          "time": "10am-1pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Hiawatha Community Center",
+      "address": "2700 California Ave SW, Seattle, WA 98116",
+      "phone": "206-684-7441",
+      "zone": 1,
+      "center_hours": "Mon-Thu 10am-7pm, Fri 11am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Open Gym (Basketball)",
+      "ages": "10 and Older",
+      "code": "87010",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Fri",
+          "time": "2-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Hiawatha Community Center",
+      "address": "2700 California Ave SW, Seattle, WA 98116",
+      "phone": "206-684-7441",
+      "zone": 1,
+      "center_hours": "Mon-Thu 10am-7pm, Fri 11am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "87015",
+      "date_range": "4/7-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "1-3pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Hiawatha Community Center",
+      "address": "2700 California Ave SW, Seattle, WA 98116",
+      "phone": "206-684-7441",
+      "zone": 1,
+      "center_hours": "Mon-Thu 10am-7pm, Fri 11am-8pm",
+      "type": "drop-in",
+      "category": "Fitness",
+      "activity": "Fitness Room",
+      "program": "Fitness Room",
+      "ages": "18 and Older",
+      "code": "87020",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Wed/Fri",
+          "time": "10am-2pm"
+        },
+        {
+          "day": "Tue/Thu",
+          "time": "10am-2pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "High Point Community Center",
+      "address": "6920 34th Ave SW, Seattle, WA 98126",
+      "phone": "206-684-7422",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm, Sun Noon-7pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Open Gym",
+      "program": "Open Gym — Adult",
+      "ages": "18 and Older",
+      "code": "87101",
+      "date_range": "4/6-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Tue/Thu/Fri",
+          "time": "11am-2pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "9am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "High Point Community Center",
+      "address": "6920 34th Ave SW, Seattle, WA 98126",
+      "phone": "206-684-7422",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm, Sun Noon-7pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "87110",
+      "date_range": "4/8-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wed/Fri",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "High Point Community Center",
+      "address": "6920 34th Ave SW, Seattle, WA 98126",
+      "phone": "206-684-7422",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm, Sun Noon-7pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Open Gym",
+      "program": "Open Gym — Youth",
+      "ages": "10-18",
+      "code": "87105",
+      "date_range": "4/6-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Fri",
+          "time": "3-5pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "Noon-3pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "High Point Community Center",
+      "address": "6920 34th Ave SW, Seattle, WA 98126",
+      "phone": "206-684-7422",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm, Sun Noon-7pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Karate",
+      "program": "Tang Soo Do Karate",
+      "ages": "10 and Older",
+      "code": "87120",
+      "date_range": "4/7-6/11",
+      "cost": "$165",
+      "sessions": [
+        {
+          "day": "Mon/Wed",
+          "time": "6-7:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "High Point Community Center",
+      "address": "6920 34th Ave SW, Seattle, WA 98126",
+      "phone": "206-684-7422",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm, Sun Noon-7pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Tae Kwon Do",
+      "program": "West Seattle Tae Kwon Do",
+      "ages": "18 and Older",
+      "code": "87125",
+      "date_range": "4/7-6/14",
+      "cost": "$46",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "6-7pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "10-11am"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "High Point Community Center",
+      "address": "6920 34th Ave SW, Seattle, WA 98126",
+      "phone": "206-684-7422",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm, Sun Noon-7pm",
+      "type": "program",
+      "category": "Music & Theater",
+      "activity": "Piano",
+      "program": "Piano Instruction",
+      "ages": "6 and Older",
+      "code": "87130",
+      "date_range": "4/9-6/11",
+      "cost": "$35",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "3:30-6pm"
+        }
+      ],
+      "notes": "$35 per 30-minute session",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "High Point Community Center",
+      "address": "6920 34th Ave SW, Seattle, WA 98126",
+      "phone": "206-684-7422",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm, Sun Noon-7pm",
+      "type": "program",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Little Hoopers",
+      "ages": "3-5",
+      "code": "87135",
+      "date_range": "4/7-5/12",
+      "cost": "$60",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "5:15-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "High Point Community Center",
+      "address": "6920 34th Ave SW, Seattle, WA 98126",
+      "phone": "206-684-7422",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm, Sun Noon-7pm",
+      "type": "program",
+      "category": "Dance",
+      "activity": "Tap/Jazz",
+      "program": "Tap and Jazz: Beginner",
+      "ages": "5-9",
+      "code": "87140",
+      "date_range": "4/6-6/8",
+      "cost": "$78",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "5-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Adult Basketball Drop-In",
+      "ages": "18 and Older",
+      "code": "87201",
+      "date_range": "4/6-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "6-8:30pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "10am-1pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "87205",
+      "date_range": "4/6-6/8",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Badminton",
+      "program": "Badminton Drop-In",
+      "ages": "16 and Older",
+      "code": "87210",
+      "date_range": "4/7-6/9",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "10am-1pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Dance",
+      "activity": "Ballroom Dance",
+      "program": "Ballroom & Line Dance",
+      "ages": "18 and Older",
+      "code": "87215",
+      "date_range": "4/8-6/10",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Fitness",
+      "activity": "Tai Chi",
+      "program": "Adult Tai Chi",
+      "ages": "18 and Older",
+      "code": "87220",
+      "date_range": "4/8-6/10",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "1-2pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Arts & Crafts",
+      "activity": "Fiber Arts",
+      "program": "Fiber Arts Group",
+      "ages": "18 and Older",
+      "code": "87225",
+      "date_range": "4/11-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Jiu-Jitsu",
+      "program": "Brazilian Jiu-Jitsu — Youth",
+      "ages": "5-8",
+      "code": "87230",
+      "date_range": "4/7-6/9",
+      "cost": "$120",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "4:30-5:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Pottery",
+      "program": "Pottery — Adult",
+      "ages": "18 and Older",
+      "code": "87235",
+      "date_range": "4/9-6/11",
+      "cost": "$385",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-8:30pm"
+        }
+      ],
+      "notes": "Materials included",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Jefferson Community Center",
+      "address": "3801 Beacon Ave S, Seattle, WA 98108",
+      "phone": "206-684-7481",
+      "zone": 1,
+      "center_hours": "Mon-Fri 9am-9pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Education",
+      "activity": "Cooking",
+      "program": "Teen Chef",
+      "ages": "12-17",
+      "code": "87240",
+      "date_range": "4/8-6/10",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "4-5:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "drop-in",
+      "category": "Fitness",
+      "activity": "Fitness Room",
+      "program": "Fitness Room",
+      "ages": "18 and Older",
+      "code": "87301",
+      "date_range": "4/6-6/15",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Thu",
+          "time": "8:30am-9pm"
+        },
+        {
+          "day": "Fri/Sat",
+          "time": "8:30am-7pm"
+        },
+        {
+          "day": "Sunday",
+          "time": "9am-7pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "87305",
+      "date_range": "4/5-6/15",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Sunday",
+          "time": "1-3pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Volleyball",
+      "program": "Volleyball Drop-In",
+      "ages": "18 and Older",
+      "code": "87310",
+      "date_range": "4/5-6/15",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Sunday",
+          "time": "3-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "drop-in",
+      "category": "Fitness",
+      "activity": "Zumba",
+      "program": "Family Zumba",
+      "ages": "14 and Older",
+      "code": "87315",
+      "date_range": "4/8-6/10",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "5:30-6:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "drop-in",
+      "category": "Social & Games",
+      "activity": "Chess",
+      "program": "Detective Cookie's Chess Club",
+      "ages": "7-19",
+      "code": "87320",
+      "date_range": "4/5-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Karate",
+      "program": "Goju Ryu Karate",
+      "ages": "6 and Older",
+      "code": "87325",
+      "date_range": "4/7-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Wed",
+          "time": "5:30-7pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "program",
+      "category": "Music & Theater",
+      "activity": "Guitar",
+      "program": "Beginner Guitar",
+      "ages": "8-12",
+      "code": "87330",
+      "date_range": "4/6-6/8",
+      "cost": "$81",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "5-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Dance Fitness",
+      "program": "Mixxed Fit",
+      "ages": "18 and Older",
+      "code": "87335",
+      "date_range": "4/7-6/9",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "6-7pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Rainier Beach Community Center",
+      "address": "8825 Rainier Ave S, Seattle, WA 98118",
+      "phone": "206-386-1925",
+      "zone": 1,
+      "center_hours": "Mon-Thu 8:30am-9pm, Fri-Sat 8:30am-7pm, Sun 9am-7pm",
+      "type": "program",
+      "category": "Music & Theater",
+      "activity": "Ukulele",
+      "program": "Ukulele: Beginner",
+      "ages": "5-12",
+      "code": "87340",
+      "date_range": "4/6-6/8",
+      "cost": "$68",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "4-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Van Asselt Community Center",
+      "address": "2820 S Myrtle St, Seattle, WA 98108",
+      "phone": "206-386-1921",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-7pm, Fri 10am-7pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Youth Basketball Drop-In",
+      "ages": "11-17",
+      "code": "87401",
+      "date_range": "4/6-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Thu",
+          "time": "4-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Van Asselt Community Center",
+      "address": "2820 S Myrtle St, Seattle, WA 98108",
+      "phone": "206-386-1921",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-7pm, Fri 10am-7pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Senior Pickleball",
+      "ages": "50 and Older",
+      "code": "87405",
+      "date_range": "4/6-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Wed",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Van Asselt Community Center",
+      "address": "2820 S Myrtle St, Seattle, WA 98108",
+      "phone": "206-386-1921",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-7pm, Fri 10am-7pm",
+      "type": "drop-in",
+      "category": "Social & Games",
+      "activity": "Mahjong",
+      "program": "Mahjong Etc.",
+      "ages": "18 and Older",
+      "code": "87410",
+      "date_range": "4/7-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "Noon-3pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Van Asselt Community Center",
+      "address": "2820 S Myrtle St, Seattle, WA 98108",
+      "phone": "206-386-1921",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-7pm, Fri 10am-7pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Dance Fitness",
+      "program": "Women's Rhythm & Fitness",
+      "ages": "16 and Older",
+      "code": "87415",
+      "date_range": "4/7-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "10-11am"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Van Asselt Community Center",
+      "address": "2820 S Myrtle St, Seattle, WA 98108",
+      "phone": "206-386-1921",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-7pm, Fri 10am-7pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "B-Ball and Talk",
+      "ages": "10-17",
+      "code": "87420",
+      "date_range": "4/6-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Thu",
+          "time": "3-4pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Van Asselt Community Center",
+      "address": "2820 S Myrtle St, Seattle, WA 98108",
+      "phone": "206-386-1921",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-7pm, Fri 10am-7pm",
+      "type": "drop-in",
+      "category": "Education",
+      "activity": "Cooking",
+      "program": "Teen Cooking",
+      "ages": "12-17",
+      "code": "87425",
+      "date_range": "4/8-6/10",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "4-5:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Van Asselt Community Center",
+      "address": "2820 S Myrtle St, Seattle, WA 98108",
+      "phone": "206-386-1921",
+      "zone": 1,
+      "center_hours": "Mon-Thu 9am-7pm, Fri 10am-7pm",
+      "type": "program",
+      "category": "Education",
+      "activity": "Youth Development",
+      "program": "Young Ladies Live",
+      "ages": "12-18",
+      "code": "87430",
+      "date_range": "4/6-6/8",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "4-5:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Adult Basketball Drop-In",
+      "ages": "18 and Older",
+      "code": "87501",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Wed/Fri",
+          "time": "5:30-8:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Badminton",
+      "program": "Adult Badminton Drop-In",
+      "ages": "18 and Older",
+      "code": "87505",
+      "date_range": "4/7-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "2-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "87510",
+      "date_range": "4/6-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "11am-1pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "9am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Volleyball",
+      "program": "Volleyball Drop-In",
+      "ages": "18 and Older",
+      "code": "87515",
+      "date_range": "4/8-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "5:30-8:30pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "1-3pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Table Tennis",
+      "program": "Table Tennis Drop-In",
+      "ages": "18 and Older",
+      "code": "87520",
+      "date_range": "4/6-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Wed/Fri",
+          "time": "11am-1pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "9am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Social & Games",
+      "activity": "Mahjong",
+      "program": "Chinese Mahjong & Chess",
+      "ages": "50 and Older",
+      "code": "87525",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Fri",
+          "time": "9:30am-4pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Fitness",
+      "activity": "Yoga",
+      "program": "Gentle Yoga",
+      "ages": "18 and Older",
+      "code": "87530",
+      "date_range": "4/9-6/12",
+      "cost": "$3",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "11:30am-12:30pm"
+        }
+      ],
+      "notes": "$3 per session",
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Kung Fu",
+      "program": "8 Animals/8 Methods Kung-Fu",
+      "ages": "12 and Older",
+      "code": "87535",
+      "date_range": "4/5-6/14",
+      "cost": "$78",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "9-10:30am"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "International District/Chinatown Community Center",
+      "address": "719 8th Ave S, Seattle, WA 98104",
+      "phone": "206-233-0042",
+      "zone": 2,
+      "center_hours": "M/W/F 11am-9pm, Tu/Th 9:30am-6pm, Sat 9am-5pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Zumba",
+      "program": "Zumba",
+      "ages": "16 and Older",
+      "code": "87540",
+      "date_range": "4/5-6/14",
+      "cost": "$65",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "10:30am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnolia Community Center",
+      "address": "2530 34th Ave W, Seattle, WA 98199",
+      "phone": "206-386-4235",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Men's Basketball Drop-In",
+      "ages": "18 and Older",
+      "code": "87601",
+      "date_range": "4/7-6/9",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "7-9pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnolia Community Center",
+      "address": "2530 34th Ave W, Seattle, WA 98199",
+      "phone": "206-386-4235",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Women's Basketball Drop-In",
+      "ages": "18 and Older",
+      "code": "87605",
+      "date_range": "4/9-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "7-9pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnolia Community Center",
+      "address": "2530 34th Ave W, Seattle, WA 98199",
+      "phone": "206-386-4235",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In — Adult",
+      "ages": "18 and Older",
+      "code": "87610",
+      "date_range": "4/6-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Thu",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnolia Community Center",
+      "address": "2530 34th Ave W, Seattle, WA 98199",
+      "phone": "206-386-4235",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Volleyball",
+      "program": "Volleyball Drop-In",
+      "ages": "16 and Older",
+      "code": "87615",
+      "date_range": "4/5-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnolia Community Center",
+      "address": "2530 34th Ave W, Seattle, WA 98199",
+      "phone": "206-386-4235",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Yoga",
+      "program": "Gentle Yoga & Meditation",
+      "ages": "12 and Older",
+      "code": "87620",
+      "date_range": "4/7-6/9",
+      "cost": "$60",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "9:30-10:30am"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnolia Community Center",
+      "address": "2530 34th Ave W, Seattle, WA 98199",
+      "phone": "206-386-4235",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
+      "type": "program",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Little Hoopers",
+      "ages": "6-8",
+      "code": "87625",
+      "date_range": "4/7-5/12",
+      "cost": "$90",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "5:30-6:15pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnolia Community Center",
+      "address": "2530 34th Ave W, Seattle, WA 98199",
+      "phone": "206-386-4235",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Tae Kwon Do",
+      "program": "Tae Kwon Do — All Levels",
+      "ages": "7 and Older",
+      "code": "87630",
+      "date_range": "4/7-6/12",
+      "cost": "$55",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "5-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnolia Community Center",
+      "address": "2530 34th Ave W, Seattle, WA 98199",
+      "phone": "206-386-4235",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 10am-5pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Pottery",
+      "program": "Pottery: Beginner/Intermediate",
+      "ages": "18 and Older",
+      "code": "87635",
+      "date_range": "4/7-6/9",
+      "cost": "$500",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "6:30-9pm"
+        }
+      ],
+      "notes": "Materials included",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Adult Basketball Drop-In",
+      "ages": "18 and Older",
+      "code": "87701",
+      "date_range": "4/8-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wed/Fri",
+          "time": "11:30am-1:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Badminton",
+      "program": "Badminton Drop-In",
+      "ages": "18 and Older",
+      "code": "87705",
+      "date_range": "4/11-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "6-8pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "87710",
+      "date_range": "4/6-6/8",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "11:30am-1:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Volleyball",
+      "program": "Volleyball Drop-In",
+      "ages": "18 and Older",
+      "code": "87715",
+      "date_range": "4/9-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-8pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Wrestling",
+      "program": "Wrestling — Middle School",
+      "ages": "11-14",
+      "code": "87720",
+      "date_range": "4/6-6/10",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Tue",
+          "time": "4-5:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Yoga",
+      "program": "Hatha Yoga",
+      "ages": "18 and Older",
+      "code": "87725",
+      "date_range": "4/8-6/11",
+      "cost": "$60",
+      "sessions": [
+        {
+          "day": "Wed/Thu",
+          "time": "10-11:15am"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Painting",
+      "program": "Watercolor Painting",
+      "ages": "16 and Older",
+      "code": "87730",
+      "date_range": "4/6-6/8",
+      "cost": "$165",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "10am-12:30pm"
+        }
+      ],
+      "notes": "Materials included",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "program",
+      "category": "Dance",
+      "activity": "Dance Fitness",
+      "program": "Cardio Dance Party",
+      "ages": "18 and Older",
+      "code": "87735",
+      "date_range": "4/11-6/13",
+      "cost": "$10",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "5:30-6:30pm"
+        }
+      ],
+      "notes": "$10 per class, drop-in",
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Miller Community Center",
+      "address": "330 19th Ave E, Seattle, WA 98112",
+      "phone": "206-684-4753",
+      "zone": 2,
+      "center_hours": "Mon-Thu 10am-8:30pm, Fri 10am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Wheelchair Sports",
+      "program": "Wheelchair Sports",
+      "ages": "10 and Older",
+      "code": "87740",
+      "date_range": "4/7-6/9",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "5-7pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Adult Basketball Drop-In",
+      "ages": "18 and Older",
+      "code": "87801",
+      "date_range": "4/8-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wed/Thu",
+          "time": "11:30am-1:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Adult Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "87805",
+      "date_range": "4/7-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "10am-Noon"
+        },
+        {
+          "day": "Saturday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Volleyball",
+      "program": "Adult Volleyball Drop-In",
+      "ages": "18 and Older",
+      "code": "87810",
+      "date_range": "4/9-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-8pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Badminton",
+      "program": "Adult Badminton Drop-In",
+      "ages": "18 and Older",
+      "code": "87815",
+      "date_range": "4/6-6/8",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Dodgeball",
+      "program": "Adult Dodgeball Drop-In",
+      "ages": "18 and Older",
+      "code": "87820",
+      "date_range": "4/7-6/9",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "6-8pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Table Tennis",
+      "program": "Table Tennis Drop-In",
+      "ages": "All Ages",
+      "code": "87825",
+      "date_range": "4/8-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wed/Fri",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "drop-in",
+      "category": "Social & Games",
+      "activity": "Mahjong",
+      "program": "Mahjong Drop-In",
+      "ages": "18 and Older",
+      "code": "87830",
+      "date_range": "4/9-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "1-3pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "program",
+      "category": "Dance",
+      "activity": "Dance Fitness",
+      "program": "Community Dance Fitness",
+      "ages": "18 and Older",
+      "code": "87835",
+      "date_range": "4/7-6/9",
+      "cost": "$40",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "5:15-6:15pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Montlake Community Center",
+      "address": "1618 E Calhoun St, Seattle, WA 98112",
+      "phone": "206-684-4736",
+      "zone": 2,
+      "center_hours": "M/F 10am-6pm, Tu/W/Th 1:30-8pm, Sat 9am-3:30pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Crochet",
+      "program": "Hooked on Crochet",
+      "ages": "16 and Older",
+      "code": "87840",
+      "date_range": "4/9-6/11",
+      "cost": "$135",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-8pm"
+        }
+      ],
+      "notes": "Materials included for first project",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "drop-in",
+      "category": "Fitness",
+      "activity": "Fitness Room",
+      "program": "Fitness Room",
+      "ages": "18 and Older",
+      "code": "87901",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Fri",
+          "time": "9am-8pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "87905",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Fri",
+          "time": "10am-Noon"
+        },
+        {
+          "day": "Wednesday",
+          "time": "5:30-7:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Table Tennis",
+      "program": "Ping-Pong / Table Tennis",
+      "ages": "7 and Older",
+      "code": "87910",
+      "date_range": "4/6-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Fri",
+          "time": "9am-8pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "drop-in",
+      "category": "Music & Theater",
+      "activity": "Jam Session",
+      "program": "Jam Session",
+      "ages": "10 and Older",
+      "code": "87915",
+      "date_range": "4/9-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-8pm"
+        }
+      ],
+      "notes": "Bring your own instrument",
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Painting",
+      "program": "Acrylic Painting",
+      "ages": "18 and Older",
+      "code": "87920",
+      "date_range": "4/7-6/9",
+      "cost": "$150",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": "Materials included",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Yoga",
+      "program": "Gentle Flow Yoga",
+      "ages": "18 and Older",
+      "code": "87925",
+      "date_range": "4/8-6/11",
+      "cost": "$75",
+      "sessions": [
+        {
+          "day": "Wed/Thu",
+          "time": "10-11am"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Karate",
+      "program": "Goju-Ryu Karate",
+      "ages": "14 and Older",
+      "code": "87930",
+      "date_range": "4/6-6/8",
+      "cost": "$50",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "6-7:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Kendo",
+      "program": "Kendo",
+      "ages": "10 and Older",
+      "code": "87935",
+      "date_range": "4/8-6/10",
+      "cost": "$50",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "6-7:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Northgate Community Center",
+      "address": "10510 5th Ave NE, Seattle, WA 98125",
+      "phone": "206-386-4283",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm",
+      "type": "program",
+      "category": "Education",
+      "activity": "Language",
+      "program": "Mandarin — Beginners",
+      "ages": "18 and Older",
+      "code": "87940",
+      "date_range": "4/9-6/11",
+      "cost": "$160",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "6-7:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Queen Anne Community Center",
+      "address": "1901 1st Ave W, Seattle, WA 98119",
+      "phone": "206-386-4240",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Basketball Drop-In",
+      "ages": "All Ages",
+      "code": "88001",
+      "date_range": "4/7-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "6-8pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Queen Anne Community Center",
+      "address": "1901 1st Ave W, Seattle, WA 98119",
+      "phone": "206-386-4240",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "All Ages",
+      "code": "88005",
+      "date_range": "4/6-6/11",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Wed",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Queen Anne Community Center",
+      "address": "1901 1st Ave W, Seattle, WA 98119",
+      "phone": "206-386-4240",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Fitness",
+      "activity": "Fitness Room",
+      "program": "Fitness Room",
+      "ages": "18 and Older",
+      "code": "88010",
+      "date_range": "4/6-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon-Fri",
+          "time": "9am-8pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "9am-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Queen Anne Community Center",
+      "address": "1901 1st Ave W, Seattle, WA 98119",
+      "phone": "206-386-4240",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm",
+      "type": "drop-in",
+      "category": "Education",
+      "activity": "Language",
+      "program": "English Conversation Circle",
+      "ages": "18 and Older",
+      "code": "88015",
+      "date_range": "4/7-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "10-11:30am"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Queen Anne Community Center",
+      "address": "1901 1st Ave W, Seattle, WA 98119",
+      "phone": "206-386-4240",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Pottery",
+      "program": "Intro to Pottery",
+      "ages": "10 and Older",
+      "code": "88020",
+      "date_range": "4/6-6/8",
+      "cost": "$500",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "6-9pm"
+        }
+      ],
+      "notes": "Materials included",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Queen Anne Community Center",
+      "address": "1901 1st Ave W, Seattle, WA 98119",
+      "phone": "206-386-4240",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Tae Kwon Do",
+      "program": "Traditional Non-Contact Tae Kwon Do",
+      "ages": "6 and Older",
+      "code": "88025",
+      "date_range": "4/6-6/11",
+      "cost": "$56",
+      "sessions": [
+        {
+          "day": "Mon/Wed",
+          "time": "5-6pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Queen Anne Community Center",
+      "address": "1901 1st Ave W, Seattle, WA 98119",
+      "phone": "206-386-4240",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Yoga",
+      "program": "Vinyasa Yoga",
+      "ages": "18 and Older",
+      "code": "88030",
+      "date_range": "4/7-6/9",
+      "cost": "$90",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "9:30-10:45am"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Queen Anne Community Center",
+      "address": "1901 1st Ave W, Seattle, WA 98119",
+      "phone": "206-386-4240",
+      "zone": 2,
+      "center_hours": "Mon-Fri 9am-8pm, Sat 9am-5pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Pilates",
+      "program": "Pilates",
+      "ages": "18 and Older",
+      "code": "88035",
+      "date_range": "4/6-6/8",
+      "cost": "$150",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "9:30-10:30am"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Yesler Community Center",
+      "address": "917 E Yesler Way, Seattle, WA 98122",
+      "phone": "206-386-1245",
+      "zone": 2,
+      "center_hours": "Mon-Fri 7:15am-6:45pm, Sat 8:30am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Open Gym",
+      "program": "Open Gym — Youth",
+      "ages": "12-18",
+      "code": "88101",
+      "date_range": "4/8-6/10",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "3-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Yesler Community Center",
+      "address": "917 E Yesler Way, Seattle, WA 98122",
+      "phone": "206-386-1245",
+      "zone": 2,
+      "center_hours": "Mon-Fri 7:15am-6:45pm, Sat 8:30am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Open Gym",
+      "program": "Open Gym — All Ages",
+      "ages": "All Ages",
+      "code": "88105",
+      "date_range": "4/11-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "3-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Yesler Community Center",
+      "address": "917 E Yesler Way, Seattle, WA 98122",
+      "phone": "206-386-1245",
+      "zone": 2,
+      "center_hours": "Mon-Fri 7:15am-6:45pm, Sat 8:30am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "88110",
+      "date_range": "4/7-6/12",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Tue/Thu",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Yesler Community Center",
+      "address": "917 E Yesler Way, Seattle, WA 98122",
+      "phone": "206-386-1245",
+      "zone": 2,
+      "center_hours": "Mon-Fri 7:15am-6:45pm, Sat 8:30am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Table Tennis",
+      "program": "Ping-Pong / Table Tennis",
+      "ages": "18 and Older",
+      "code": "88115",
+      "date_range": "4/5-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "10am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Yesler Community Center",
+      "address": "917 E Yesler Way, Seattle, WA 98122",
+      "phone": "206-386-1245",
+      "zone": 2,
+      "center_hours": "Mon-Fri 7:15am-6:45pm, Sat 8:30am-5pm",
+      "type": "drop-in",
+      "category": "Social & Games",
+      "activity": "Board Games",
+      "program": "Board Games Drop-In",
+      "ages": "7 and Older",
+      "code": "88120",
+      "date_range": "4/5-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "Noon-3pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Yesler Community Center",
+      "address": "917 E Yesler Way, Seattle, WA 98122",
+      "phone": "206-386-1245",
+      "zone": 2,
+      "center_hours": "Mon-Fri 7:15am-6:45pm, Sat 8:30am-5pm",
+      "type": "program",
+      "category": "Dance",
+      "activity": "Cardio Dance",
+      "program": "Cardio Dance",
+      "ages": "18 and Older",
+      "code": "88125",
+      "date_range": "4/8-6/10",
+      "cost": "$42",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "5:30-6:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Yesler Community Center",
+      "address": "917 E Yesler Way, Seattle, WA 98122",
+      "phone": "206-386-1245",
+      "zone": 2,
+      "center_hours": "Mon-Fri 7:15am-6:45pm, Sat 8:30am-5pm",
+      "type": "program",
+      "category": "Music & Theater",
+      "activity": "Drumming",
+      "program": "Drumming Circle",
+      "ages": "16 and Older",
+      "code": "88130",
+      "date_range": "4/11-6/13",
+      "cost": "$52",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "5:30-6:30pm"
+        }
+      ],
+      "notes": "Drums provided",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Yesler Community Center",
+      "address": "917 E Yesler Way, Seattle, WA 98122",
+      "phone": "206-386-1245",
+      "zone": 2,
+      "center_hours": "Mon-Fri 7:15am-6:45pm, Sat 8:30am-5pm",
+      "type": "program",
+      "category": "Dance",
+      "activity": "Hip Hop",
+      "program": "Hip Hop Dance",
+      "ages": "18 and Older",
+      "code": "88135",
+      "date_range": "4/5-6/14",
+      "cost": "$42",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "1-2pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Laurelhurst Community Center",
+      "address": "4554 NE 41st St, Seattle, WA 98105",
+      "phone": "206-684-7529",
+      "zone": 3,
+      "center_hours": "M/W/F 2-7pm, Tu/Th 9am-2pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Pottery",
+      "program": "Pottery — Adult Morning",
+      "ages": "18 and Older",
+      "code": "88201",
+      "date_range": "4/7-6/9",
+      "cost": "$460",
+      "sessions": [
+        {
+          "day": "Tuesday",
+          "time": "10am-1pm"
+        }
+      ],
+      "notes": "Materials included",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Laurelhurst Community Center",
+      "address": "4554 NE 41st St, Seattle, WA 98105",
+      "phone": "206-684-7529",
+      "zone": 3,
+      "center_hours": "M/W/F 2-7pm, Tu/Th 9am-2pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Pottery",
+      "program": "Pottery — Adult Evening",
+      "ages": "18 and Older",
+      "code": "88205",
+      "date_range": "4/11-6/13",
+      "cost": "$460",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "6:30-9:30pm"
+        }
+      ],
+      "notes": "Materials included",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Laurelhurst Community Center",
+      "address": "4554 NE 41st St, Seattle, WA 98105",
+      "phone": "206-684-7529",
+      "zone": 3,
+      "center_hours": "M/W/F 2-7pm, Tu/Th 9am-2pm",
+      "type": "program",
+      "category": "Arts & Crafts",
+      "activity": "Pottery",
+      "program": "Youth Pottery",
+      "ages": "8-14",
+      "code": "88210",
+      "date_range": "4/8-6/10",
+      "cost": "$344",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "3:30-5:30pm"
+        }
+      ],
+      "notes": "Materials included",
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Laurelhurst Community Center",
+      "address": "4554 NE 41st St, Seattle, WA 98105",
+      "phone": "206-684-7529",
+      "zone": 3,
+      "center_hours": "M/W/F 2-7pm, Tu/Th 9am-2pm",
+      "type": "program",
+      "category": "Dance",
+      "activity": "Ballet",
+      "program": "Ballet — Youth",
+      "ages": "6-8",
+      "code": "88215",
+      "date_range": "4/8-6/10",
+      "cost": "$80",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "2:15-3:15pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Laurelhurst Community Center",
+      "address": "4554 NE 41st St, Seattle, WA 98105",
+      "phone": "206-684-7529",
+      "zone": 3,
+      "center_hours": "M/W/F 2-7pm, Tu/Th 9am-2pm",
+      "type": "program",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Mini Hoopers League",
+      "ages": "6-7",
+      "code": "88220",
+      "date_range": "4/6-6/8",
+      "cost": "$100",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "4:30-5:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Laurelhurst Community Center",
+      "address": "4554 NE 41st St, Seattle, WA 98105",
+      "phone": "206-684-7529",
+      "zone": 3,
+      "center_hours": "M/W/F 2-7pm, Tu/Th 9am-2pm",
+      "type": "program",
+      "category": "Fitness",
+      "activity": "Yoga",
+      "program": "Vinyasa Yoga",
+      "ages": "18 and Older",
+      "code": "88225",
+      "date_range": "4/8-6/10",
+      "cost": "$27",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "5:30-6:30pm"
+        }
+      ],
+      "notes": "$27 per class, drop-in welcome",
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Adult Basketball Drop-In",
+      "ages": "18 and Older",
+      "code": "88301",
+      "date_range": "4/6-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Mon/Tue/Wed/Fri",
+          "time": "6-8:30pm"
+        },
+        {
+          "day": "Saturday",
+          "time": "10am-1pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Badminton",
+      "program": "Badminton Drop-In",
+      "ages": "18 and Older",
+      "code": "88305",
+      "date_range": "4/6-6/8",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Monday",
+          "time": "2-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Pickleball",
+      "program": "Pickleball Drop-In",
+      "ages": "18 and Older",
+      "code": "88310",
+      "date_range": "4/9-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Thursday",
+          "time": "9am-Noon"
+        },
+        {
+          "day": "Saturday",
+          "time": "1-3pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Social & Games",
+      "activity": "Mahjong",
+      "program": "Mahjong Drop-In",
+      "ages": "18 and Older",
+      "code": "88315",
+      "date_range": "4/8-6/10",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "9am-Noon"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Volleyball",
+      "program": "Teen Volleyball Drop-In",
+      "ages": "12-17",
+      "code": "88320",
+      "date_range": "4/11-6/13",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Friday",
+          "time": "6-8pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "drop-in",
+      "category": "Sports / Open Gym",
+      "activity": "Table Tennis",
+      "program": "Adult Table Tennis Drop-In",
+      "ages": "18 and Older",
+      "code": "88325",
+      "date_range": "4/5-6/14",
+      "cost": "FREE",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "3-5pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": false
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "program",
+      "category": "Martial Arts",
+      "activity": "Karate",
+      "program": "Shorin-Ryu Karate",
+      "ages": "9 and Older",
+      "code": "88330",
+      "date_range": "4/7-6/11",
+      "cost": "$90",
+      "sessions": [
+        {
+          "day": "Mon/Wed",
+          "time": "6-7:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "program",
+      "category": "Sports / Open Gym",
+      "activity": "Basketball",
+      "program": "Little Hoopers Basketball",
+      "ages": "5-7",
+      "code": "88335",
+      "date_range": "4/8-5/13",
+      "cost": "$60",
+      "sessions": [
+        {
+          "day": "Wednesday",
+          "time": "4-4:45pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
+    },
+    {
+      "season": "Spring 2026",
+      "center": "Magnuson Community Center",
+      "address": "7110 62nd Ave NE, Seattle, WA 98115",
+      "phone": "206-684-7026",
+      "zone": 3,
+      "center_hours": "M/Tu/F 2-9pm, W/Th 9am-8pm, Sat 10am-5pm",
+      "type": "program",
+      "category": "Sports / Open Gym",
+      "activity": "Table Tennis",
+      "program": "Table Tennis: Skills & Drills — Adult",
+      "ages": "18 and Older",
+      "code": "88340",
+      "date_range": "4/5-6/14",
+      "cost": "$96",
+      "sessions": [
+        {
+          "day": "Saturday",
+          "time": "1-2:30pm"
+        }
+      ],
+      "notes": null,
+      "registration_required": true
     }
   ]
 }
