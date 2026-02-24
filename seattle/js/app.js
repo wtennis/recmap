@@ -614,11 +614,11 @@
     return `${loc.protocol}//${loc.host}${basePath}`;
   }
 
-  function showSubscribeModal() {
+  function showExportModal() {
     const slug = getSubscribeSlug();
     const baseUrl = getBaseUrl();
     const url = `${baseUrl}/cal/${slug}.ics`;
-    const $modal = document.getElementById('subscribe-modal');
+    const $modal = document.getElementById('export-modal');
     const $urlInput = document.getElementById('subscribe-url');
     const $copyBtn = document.getElementById('copy-url');
     $urlInput.value = url;
@@ -732,15 +732,15 @@
       populateDropdown('dd-centers', centersWithEvents, filters.centers);
       populateDropdown('dd-categories', categories, filters.categories);
 
-      // Calendar export buttons
+      // Calendar export modal
+      document.getElementById('export-cal').addEventListener('click', showExportModal);
       document.getElementById('export-ics').addEventListener('click', downloadICS);
-      document.getElementById('subscribe-ics').addEventListener('click', showSubscribeModal);
 
       document.getElementById('close-modal').addEventListener('click', function () {
-        document.getElementById('subscribe-modal').classList.add('hidden');
+        document.getElementById('export-modal').classList.add('hidden');
       });
 
-      document.getElementById('subscribe-modal').addEventListener('click', function (e) {
+      document.getElementById('export-modal').addEventListener('click', function (e) {
         if (e.target === this) this.classList.add('hidden');
       });
 

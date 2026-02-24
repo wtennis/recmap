@@ -461,9 +461,9 @@ html, body {
   padding: 4px 8px;
 }
 
-#export-ics, #subscribe-ics {
-  background: #e5e5e5;
-  color: #444;
+#export-cal {
+  background: var(--accent-bg);
+  color: var(--accent-dark);
   border: none;
   border-radius: 14px;
   padding: 4px 12px;
@@ -473,14 +473,7 @@ html, body {
   white-space: nowrap;
 }
 
-#export-ics:hover { background: #d4d4d4; }
-
-#subscribe-ics {
-  background: var(--accent-bg);
-  color: var(--accent-dark);
-}
-
-#subscribe-ics:hover { background: var(--accent-light); }
+#export-cal:hover { background: var(--accent-light); }
 
 /* ---- Day Tabs ---- */
 
@@ -617,11 +610,42 @@ html, body {
   margin-bottom: 6px;
 }
 
+.modal-section {
+  margin-bottom: 16px;
+}
+
+.modal-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
 .modal-desc {
   font-size: 13px;
   color: #666;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
+
+.modal-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+.modal-download-btn {
+  background: #e5e5e5;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-download-btn:hover { background: #d4d4d4; }
 
 .modal-url-row {
   display: flex;
