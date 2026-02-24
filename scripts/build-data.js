@@ -95,6 +95,248 @@ function classifyCategory(activity, program) {
 }
 
 // ---------------------------------------------------------------------------
+// Calendar (.ics) generation — build-time subscription presets
+// ---------------------------------------------------------------------------
+
+const CAL_DIR = path.join(__dirname, '..', 'seattle', 'cal');
+const DAYS_LIST = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const RRULE_DAYS = { Sunday: 'SU', Monday: 'MO', Tuesday: 'TU', Wednesday: 'WE', Thursday: 'TH', Friday: 'FR', Saturday: 'SA' };
+
+function expandDaysBuild(dayStr) {
+  if (!dayStr) return [];
+  if (dayStr.includes('-')) {
+    const parts = dayStr.split('-').map(s => s.trim());
+    if (parts.length === 2) {
+      const start = resolveDayBuild(parts[0]);
+      const end = resolveDayBuild(parts[1]);
+      if (start && end) {
+        const si = DAYS_LIST.indexOf(start);
+        const ei = DAYS_LIST.indexOf(end);
+        if (si >= 0 && ei >= 0) {
+          const result = [];
+          for (let i = si; i !== (ei + 1) % 7; i = (i + 1) % 7) {
+            result.push(DAYS_LIST[i]);
+          }
+          result.push(DAYS_LIST[ei]);
+          return result;
+        }
+      }
+    }
+  }
+  if (dayStr.includes('/')) {
+    return dayStr.split('/').map(resolveDayBuild).filter(Boolean);
+  }
+  const d = resolveDayBuild(dayStr);
+  return d ? [d] : [];
+}
+
+function resolveDayBuild(str) {
+  const map = {
+    mon: 'Monday', tue: 'Tuesday', wed: 'Wednesday', thu: 'Thursday',
+    fri: 'Friday', sat: 'Saturday', sun: 'Sunday',
+    monday: 'Monday', tuesday: 'Tuesday', wednesday: 'Wednesday',
+    thursday: 'Thursday', friday: 'Friday', saturday: 'Saturday', sunday: 'Sunday',
+  };
+  return map[str.trim().toLowerCase()] || null;
+}
+
+function flattenAllEvents(locations) {
+  const flat = [];
+  for (const loc of locations) {
+    for (const evt of (loc.events || [])) {
+      for (const session of (evt.sessions || [])) {
+        const days = expandDaysBuild(session.day);
+        for (const day of days) {
+          flat.push({
+            center: loc.name,
+            address: loc.address,
+            program: evt.program,
+            category: evt.category,
+            ages: evt.ages,
+            cost: evt.cost,
+            day,
+            time: session.time,
+            date_range: evt.date_range,
+            code: evt.code,
+          });
+        }
+      }
+    }
+  }
+  return flat;
+}
+
+function isFreeEventBuild(cost) {
+  return !cost || cost === 'FREE' || cost === '$0' || cost === 0;
+}
+
+function slugifyCategory(cat) {
+  return cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+function parseDateRangeBuild(str) {
+  if (!str) return null;
+  const m = str.match(/(\d{1,2})\/(\d{1,2})\s*-\s*(\d{1,2})\/(\d{1,2})/);
+  if (!m) return null;
+  const year = 2026;
+  return {
+    start: new Date(year, parseInt(m[1], 10) - 1, parseInt(m[2], 10)),
+    end: new Date(year, parseInt(m[3], 10) - 1, parseInt(m[4], 10)),
+  };
+}
+
+function parseTimeRangeBuild(str) {
+  if (!str) return null;
+  const s = str.toLowerCase().replace(/\s+/g, '');
+  const m = s.match(/^(\d{1,2})(?::(\d{2}))?(am|pm)?-(\d{1,2})(?::(\d{2}))?(am|pm|noon)?$/);
+  if (!m) {
+    if (s.startsWith('noon')) {
+      const m2 = s.match(/^noon-(\d{1,2})(?::(\d{2}))?(pm)?$/);
+      if (m2) {
+        let endH = parseInt(m2[1], 10);
+        const endM = m2[2] ? parseInt(m2[2], 10) : 0;
+        if (m2[3] === 'pm' && endH < 12) endH += 12;
+        return { startH: 12, startM: 0, endH, endM };
+      }
+    }
+    return null;
+  }
+  let startH = parseInt(m[1], 10);
+  const startM = m[2] ? parseInt(m[2], 10) : 0;
+  let startAP = m[3];
+  let endH = parseInt(m[4], 10);
+  const endM = m[5] ? parseInt(m[5], 10) : 0;
+  let endAP = m[6];
+
+  if (endAP === 'noon') { endH = 12; endAP = null; }
+
+  // Infer AM/PM: if only end has it, infer start from end
+  if (!startAP && endAP) {
+    if (endAP === 'pm') {
+      startAP = (startH >= 7 && startH <= 11) ? 'am' : 'pm';
+    } else {
+      startAP = 'am';
+    }
+  }
+  if (startAP === 'pm' && startH < 12) startH += 12;
+  if (startAP === 'am' && startH === 12) startH = 0;
+  if (endAP === 'pm' && endH < 12) endH += 12;
+  if (endAP === 'am' && endH === 12) endH = 0;
+
+  // If no AP at all, guess
+  if (!startAP && !endAP) {
+    if (startH < 7) startH += 12;
+    if (endH < 7) endH += 12;
+    if (endH <= startH) endH += 12;
+  }
+
+  return { startH, startM, endH, endM };
+}
+
+function firstOccurrenceBuild(rangeStart, dayName) {
+  const targetDow = DAYS_LIST.indexOf(dayName);
+  if (targetDow < 0) return rangeStart;
+  const d = new Date(rangeStart);
+  const diff = (targetDow - d.getDay() + 7) % 7;
+  d.setDate(d.getDate() + diff);
+  return d;
+}
+
+function fmtDT(d, h, m) {
+  const yy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${yy}${mm}${dd}T${String(h).padStart(2, '0')}${String(m).padStart(2, '0')}00`;
+}
+
+function fmtDate(d) {
+  const yy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${yy}${mm}${dd}`;
+}
+
+function icsEscapeBuild(str) {
+  return (str || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+}
+
+function buildICS(events, calName) {
+  let cal = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//RecMap//Seattle Community Centers//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    `X-WR-CALNAME:${icsEscapeBuild(calName)}`,
+    'X-WR-TIMEZONE:America/Los_Angeles',
+  ];
+
+  const now = new Date();
+  const stamp = `${now.getUTCFullYear()}${String(now.getUTCMonth() + 1).padStart(2, '0')}${String(now.getUTCDate()).padStart(2, '0')}T${String(now.getUTCHours()).padStart(2, '0')}${String(now.getUTCMinutes()).padStart(2, '0')}${String(now.getUTCSeconds()).padStart(2, '0')}Z`;
+
+  let n = 0;
+  for (const evt of events) {
+    const dateRange = parseDateRangeBuild(evt.date_range);
+    const timeRange = parseTimeRangeBuild(evt.time);
+    if (!dateRange || !timeRange) continue;
+
+    const firstDay = firstOccurrenceBuild(dateRange.start, evt.day);
+    if (firstDay > dateRange.end) continue;
+
+    n++;
+    const uid = `${evt.code || 'evt'}-${evt.day.toLowerCase().slice(0, 3)}-${n}@recmap`;
+    const rruleDay = RRULE_DAYS[evt.day];
+    const untilDate = fmtDate(dateRange.end);
+    const costLabel = isFreeEventBuild(evt.cost) ? 'Free' : evt.cost;
+    const desc = [evt.ages ? `Ages: ${evt.ages}` : '', `Cost: ${costLabel}`, evt.center].filter(Boolean).join('\\n');
+
+    cal.push('BEGIN:VEVENT');
+    cal.push(`UID:${uid}`);
+    cal.push(`DTSTAMP:${stamp}`);
+    cal.push(`DTSTART;TZID=America/Los_Angeles:${fmtDT(firstDay, timeRange.startH, timeRange.startM)}`);
+    cal.push(`DTEND;TZID=America/Los_Angeles:${fmtDT(firstDay, timeRange.endH, timeRange.endM)}`);
+    cal.push(`RRULE:FREQ=WEEKLY;BYDAY=${rruleDay};UNTIL=${untilDate}T235959Z`);
+    cal.push(`SUMMARY:${icsEscapeBuild(evt.program)}`);
+    cal.push(`LOCATION:${icsEscapeBuild(evt.center + ', ' + evt.address + ', Seattle, WA')}`);
+    cal.push(`DESCRIPTION:${desc}`);
+    cal.push(`CATEGORIES:${icsEscapeBuild(evt.category)}`);
+    cal.push('END:VEVENT');
+  }
+
+  cal.push('END:VCALENDAR');
+  return { ics: cal.join('\r\n') + '\r\n', count: n };
+}
+
+function generateCalendarFiles(locations, categories) {
+  if (!fs.existsSync(CAL_DIR)) {
+    fs.mkdirSync(CAL_DIR, { recursive: true });
+  }
+
+  const allEvents = flattenAllEvents(locations);
+  console.log(`\n  Calendar: ${allEvents.length} day-session events flattened`);
+
+  const presets = [
+    { slug: 'all', label: 'RecMap — All Events', filter: () => true },
+    { slug: 'free', label: 'RecMap — Free Events', filter: (e) => isFreeEventBuild(e.cost) },
+  ];
+  for (const cat of categories) {
+    presets.push({
+      slug: slugifyCategory(cat),
+      label: `RecMap — ${cat}`,
+      filter: (e) => e.category === cat,
+    });
+  }
+
+  for (const preset of presets) {
+    const filtered = allEvents.filter(preset.filter);
+    const { ics, count } = buildICS(filtered, preset.label);
+    const outPath = path.join(CAL_DIR, `${preset.slug}.ics`);
+    fs.writeFileSync(outPath, ics);
+    console.log(`  ${preset.slug}.ics — ${count} events`);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Load source files
 // ---------------------------------------------------------------------------
 
@@ -270,6 +512,8 @@ function main() {
 
   fs.writeFileSync(OUT_PATH, JSON.stringify(output, null, 2));
   console.log(`\nWrote ${locations.length} locations to ${OUT_PATH}`);
+
+  generateCalendarFiles(locations, categories);
 }
 
 main();

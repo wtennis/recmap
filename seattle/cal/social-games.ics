@@ -1,0 +1,162 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//RecMap//Seattle Community Centers//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RecMap — Social & Games
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VEVENT
+UID:86897-fri-1@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260417T130000
+DTEND;TZID=America/Los_Angeles:20260417T160000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20260613T235959Z
+SUMMARY:Mahjong Drop-In
+LOCATION:Delridge Community Center\, 4501 Delridge Way SW\, Seattle\, WA
+DESCRIPTION:Ages: 18 and Older\nCost: Free\nDelridge Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:88120-sat-2@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260411T120000
+DTEND;TZID=America/Los_Angeles:20260411T150000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20260614T235959Z
+SUMMARY:Board Games Drop-In
+LOCATION:Yesler Community Center\, 917  E Yesler Way\, Seattle\, WA
+DESCRIPTION:Ages: 7 and Older\nCost: Free\nYesler Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:86440-wed-3@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260408T173000
+DTEND;TZID=America/Los_Angeles:20260408T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20260610T235959Z
+SUMMARY:Community Bingo Night
+LOCATION:Ravenna-Eckstein Community Center\, 6535 Ravenna Ave NE\, Seattle\, WA
+DESCRIPTION:Ages: All Ages\nCost: Free\nRavenna-Eckstein Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:85500-tue-4@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260407T130000
+DTEND;TZID=America/Los_Angeles:20260407T150000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20260609T235959Z
+SUMMARY:Mahjong for Beginners
+LOCATION:Ballard Community Center\, 6020 - 28th Ave NW\, Seattle\, WA
+DESCRIPTION:Ages: 18 and Older\nCost: $44\nBallard Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87830-thu-5@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260409T130000
+DTEND;TZID=America/Los_Angeles:20260409T150000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260611T235959Z
+SUMMARY:Mahjong Drop-In
+LOCATION:Montlake Community Center\, 1618 E Calhoun St\, Seattle\, WA
+DESCRIPTION:Ages: 18 and Older\nCost: Free\nMontlake Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87525-mon-6@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260406T093000
+DTEND;TZID=America/Los_Angeles:20260406T160000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20260613T235959Z
+SUMMARY:Chinese Mahjong & Chess
+LOCATION:International District Community Center\, 718 8th Ave S\, Seattle\, WA
+DESCRIPTION:Ages: 50 and Older\nCost: Free\nInternational District Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87525-tue-7@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260407T093000
+DTEND;TZID=America/Los_Angeles:20260407T160000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20260613T235959Z
+SUMMARY:Chinese Mahjong & Chess
+LOCATION:International District Community Center\, 718 8th Ave S\, Seattle\, WA
+DESCRIPTION:Ages: 50 and Older\nCost: Free\nInternational District Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87525-wed-8@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260408T093000
+DTEND;TZID=America/Los_Angeles:20260408T160000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20260613T235959Z
+SUMMARY:Chinese Mahjong & Chess
+LOCATION:International District Community Center\, 718 8th Ave S\, Seattle\, WA
+DESCRIPTION:Ages: 50 and Older\nCost: Free\nInternational District Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87525-thu-9@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260409T093000
+DTEND;TZID=America/Los_Angeles:20260409T160000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260613T235959Z
+SUMMARY:Chinese Mahjong & Chess
+LOCATION:International District Community Center\, 718 8th Ave S\, Seattle\, WA
+DESCRIPTION:Ages: 50 and Older\nCost: Free\nInternational District Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87525-fri-10@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260410T093000
+DTEND;TZID=America/Los_Angeles:20260410T160000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20260613T235959Z
+SUMMARY:Chinese Mahjong & Chess
+LOCATION:International District Community Center\, 718 8th Ave S\, Seattle\, WA
+DESCRIPTION:Ages: 50 and Older\nCost: Free\nInternational District Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87525-fri-11@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260410T093000
+DTEND;TZID=America/Los_Angeles:20260410T160000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20260613T235959Z
+SUMMARY:Chinese Mahjong & Chess
+LOCATION:International District Community Center\, 718 8th Ave S\, Seattle\, WA
+DESCRIPTION:Ages: 50 and Older\nCost: Free\nInternational District Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:86135-fri-12@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260410T170000
+DTEND;TZID=America/Los_Angeles:20260410T200000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20260612T235959Z
+SUMMARY:Board Game Night
+LOCATION:Green Lake Community Center\, 7201 E Green Lake Dr N\, Seattle\, WA
+DESCRIPTION:Ages: All Ages\nCost: Free\nGreen Lake Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87410-tue-13@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260407T120000
+DTEND;TZID=America/Los_Angeles:20260407T150000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20260612T235959Z
+SUMMARY:Mahjong Etc.
+LOCATION:Van Asselt Community Center\, 2820 S Myrtle St\, Seattle\, WA
+DESCRIPTION:Ages: 18 and Older\nCost: Free\nVan Asselt Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+BEGIN:VEVENT
+UID:87410-thu-14@recmap
+DTSTAMP:20260224T164751Z
+DTSTART;TZID=America/Los_Angeles:20260409T120000
+DTEND;TZID=America/Los_Angeles:20260409T150000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260612T235959Z
+SUMMARY:Mahjong Etc.
+LOCATION:Van Asselt Community Center\, 2820 S Myrtle St\, Seattle\, WA
+DESCRIPTION:Ages: 18 and Older\nCost: Free\nVan Asselt Community Center
+CATEGORIES:Social & Games
+END:VEVENT
+END:VCALENDAR

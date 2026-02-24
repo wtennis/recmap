@@ -400,6 +400,232 @@
     return h * 60 + min;
   }
 
+  // ---- Calendar Export Helpers ----
+
+  const DAYS_SUNDAY_FIRST = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const RRULE_DAYS = { Sunday: 'SU', Monday: 'MO', Tuesday: 'TU', Wednesday: 'WE', Thursday: 'TH', Friday: 'FR', Saturday: 'SA' };
+
+  function parseDateRange(str) {
+    if (!str) return null;
+    const m = str.match(/(\d{1,2})\/(\d{1,2})\s*-\s*(\d{1,2})\/(\d{1,2})/);
+    if (!m) return null;
+    const year = 2026;
+    return {
+      start: new Date(year, parseInt(m[1], 10) - 1, parseInt(m[2], 10)),
+      end: new Date(year, parseInt(m[3], 10) - 1, parseInt(m[4], 10)),
+    };
+  }
+
+  function parseTimeRange(str) {
+    if (!str) return null;
+    const s = str.toLowerCase().replace(/\s+/g, '');
+    const m = s.match(/^(\d{1,2})(?::(\d{2}))?(am|pm)?-(\d{1,2})(?::(\d{2}))?(am|pm|noon)?$/);
+    if (!m) {
+      if (s.startsWith('noon')) {
+        const m2 = s.match(/^noon-(\d{1,2})(?::(\d{2}))?(pm)?$/);
+        if (m2) {
+          let endH = parseInt(m2[1], 10);
+          const endM = m2[2] ? parseInt(m2[2], 10) : 0;
+          if (m2[3] === 'pm' && endH < 12) endH += 12;
+          return { startH: 12, startM: 0, endH, endM };
+        }
+      }
+      return null;
+    }
+    let startH = parseInt(m[1], 10);
+    const startM = m[2] ? parseInt(m[2], 10) : 0;
+    let startAP = m[3];
+    let endH = parseInt(m[4], 10);
+    const endM = m[5] ? parseInt(m[5], 10) : 0;
+    let endAP = m[6];
+
+    if (endAP === 'noon') { endH = 12; endAP = null; }
+
+    if (!startAP && endAP) {
+      if (endAP === 'pm') {
+        startAP = (startH >= 7 && startH <= 11) ? 'am' : 'pm';
+      } else {
+        startAP = 'am';
+      }
+    }
+    if (startAP === 'pm' && startH < 12) startH += 12;
+    if (startAP === 'am' && startH === 12) startH = 0;
+    if (endAP === 'pm' && endH < 12) endH += 12;
+    if (endAP === 'am' && endH === 12) endH = 0;
+
+    if (!startAP && !endAP) {
+      if (startH < 7) startH += 12;
+      if (endH < 7) endH += 12;
+      if (endH <= startH) endH += 12;
+    }
+
+    return { startH, startM, endH, endM };
+  }
+
+  function firstOccurrence(rangeStart, dayName) {
+    const targetDow = DAYS_SUNDAY_FIRST.indexOf(dayName);
+    if (targetDow < 0) return rangeStart;
+    const d = new Date(rangeStart);
+    const diff = (targetDow - d.getDay() + 7) % 7;
+    d.setDate(d.getDate() + diff);
+    return d;
+  }
+
+  function formatICSDateTime(d, h, m) {
+    const yy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    return `${yy}${mm}${dd}T${String(h).padStart(2, '0')}${String(m).padStart(2, '0')}00`;
+  }
+
+  function formatICSDate(d) {
+    const yy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    return `${yy}${mm}${dd}`;
+  }
+
+  function icsEscape(str) {
+    return (str || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+  }
+
+  function getFilteredEvents() {
+    const results = [];
+    for (const loc of allLocations) {
+      const events = loc.events || [];
+      if (events.length === 0) continue;
+      if (!filters.centers.has(loc.name)) continue;
+
+      for (const evt of events) {
+        if (!eventPassesCategoryFilter(evt)) continue;
+
+        for (const session of (evt.sessions || [])) {
+          const days = expandDays(session.day);
+          for (const day of days) {
+            results.push({
+              center: loc.name,
+              address: loc.address,
+              program: evt.program,
+              category: evt.category,
+              ages: evt.ages,
+              cost: evt.cost,
+              day,
+              time: session.time,
+              date_range: evt.date_range,
+              code: evt.code,
+            });
+          }
+        }
+      }
+    }
+    return results;
+  }
+
+  function generateICS(events) {
+    const lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//RecMap//Seattle Community Centers//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'X-WR-CALNAME:RecMap — Filtered Events',
+      'X-WR-TIMEZONE:America/Los_Angeles',
+    ];
+
+    const now = new Date();
+    const stamp = `${now.getUTCFullYear()}${String(now.getUTCMonth() + 1).padStart(2, '0')}${String(now.getUTCDate()).padStart(2, '0')}T${String(now.getUTCHours()).padStart(2, '0')}${String(now.getUTCMinutes()).padStart(2, '0')}${String(now.getUTCSeconds()).padStart(2, '0')}Z`;
+
+    let n = 0;
+    for (const evt of events) {
+      const dateRange = parseDateRange(evt.date_range);
+      const timeRange = parseTimeRange(evt.time);
+      if (!dateRange || !timeRange) continue;
+
+      const firstDay = firstOccurrence(dateRange.start, evt.day);
+      if (firstDay > dateRange.end) continue;
+
+      n++;
+      const uid = `${evt.code || 'evt'}-${evt.day.toLowerCase().slice(0, 3)}-${n}@recmap`;
+      const rruleDay = RRULE_DAYS[evt.day];
+      const untilDate = formatICSDate(dateRange.end);
+      const costLabel = isFreeEvent(evt.cost) ? 'Free' : evt.cost;
+      const desc = [evt.ages ? `Ages: ${evt.ages}` : '', `Cost: ${costLabel}`, evt.center].filter(Boolean).join('\\n');
+
+      lines.push('BEGIN:VEVENT');
+      lines.push(`UID:${uid}`);
+      lines.push(`DTSTAMP:${stamp}`);
+      lines.push(`DTSTART;TZID=America/Los_Angeles:${formatICSDateTime(firstDay, timeRange.startH, timeRange.startM)}`);
+      lines.push(`DTEND;TZID=America/Los_Angeles:${formatICSDateTime(firstDay, timeRange.endH, timeRange.endM)}`);
+      lines.push(`RRULE:FREQ=WEEKLY;BYDAY=${rruleDay};UNTIL=${untilDate}T235959Z`);
+      lines.push(`SUMMARY:${icsEscape(evt.program)}`);
+      lines.push(`LOCATION:${icsEscape(evt.center + ', ' + evt.address + ', Seattle, WA')}`);
+      lines.push(`DESCRIPTION:${desc}`);
+      lines.push(`CATEGORIES:${icsEscape(evt.category)}`);
+      lines.push('END:VEVENT');
+    }
+
+    lines.push('END:VCALENDAR');
+    return lines.join('\r\n') + '\r\n';
+  }
+
+  function downloadICS() {
+    const events = getFilteredEvents();
+    const ics = generateICS(events);
+    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'recmap-spring-2026.ics';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  function slugifyCategory(cat) {
+    return cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  }
+
+  function getSubscribeSlug() {
+    const allCats = [...filters.categories];
+    // If exactly one category is selected, use its slug
+    const totalCategories = document.querySelectorAll('#dd-categories-options input').length;
+    if (allCats.length === 1) return slugifyCategory(allCats[0]);
+    // If all free-related (no way to tell), or all selected → 'all'
+    if (allCats.length === 0) return 'all';
+    if (allCats.length === totalCategories) return 'all';
+    return 'all';
+  }
+
+  function getSubscribeLabel() {
+    const slug = getSubscribeSlug();
+    if (slug === 'all') return 'All Events';
+    const allCats = [...filters.categories];
+    if (allCats.length === 1) return allCats[0];
+    return 'All Events';
+  }
+
+  function getBaseUrl() {
+    const loc = window.location;
+    const pathParts = loc.pathname.split('/');
+    // Remove trailing filename if present (e.g., index.html)
+    if (pathParts[pathParts.length - 1].includes('.')) pathParts.pop();
+    const basePath = pathParts.join('/').replace(/\/$/, '');
+    return `${loc.protocol}//${loc.host}${basePath}`;
+  }
+
+  function showSubscribeModal() {
+    const slug = getSubscribeSlug();
+    const baseUrl = getBaseUrl();
+    const url = `${baseUrl}/cal/${slug}.ics`;
+    const $modal = document.getElementById('subscribe-modal');
+    const $urlInput = document.getElementById('subscribe-url');
+    const $copyBtn = document.getElementById('copy-url');
+    $urlInput.value = url;
+    $copyBtn.textContent = 'Copy';
+    $modal.classList.remove('hidden');
+  }
+
   function getFilteredEventsForDay(day) {
     const results = [];
     for (const loc of allLocations) {
@@ -505,6 +731,25 @@
 
       populateDropdown('dd-centers', centersWithEvents, filters.centers);
       populateDropdown('dd-categories', categories, filters.categories);
+
+      // Calendar export buttons
+      document.getElementById('export-ics').addEventListener('click', downloadICS);
+      document.getElementById('subscribe-ics').addEventListener('click', showSubscribeModal);
+
+      document.getElementById('close-modal').addEventListener('click', function () {
+        document.getElementById('subscribe-modal').classList.add('hidden');
+      });
+
+      document.getElementById('subscribe-modal').addEventListener('click', function (e) {
+        if (e.target === this) this.classList.add('hidden');
+      });
+
+      document.getElementById('copy-url').addEventListener('click', function () {
+        const $url = document.getElementById('subscribe-url');
+        navigator.clipboard.writeText($url.value).then(function () {
+          document.getElementById('copy-url').textContent = 'Copied!';
+        });
+      });
 
       markersLayer.addTo(map);
       renderMarkers();
