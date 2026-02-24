@@ -582,29 +582,6 @@
     URL.revokeObjectURL(url);
   }
 
-  function slugifyCategory(cat) {
-    return cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  }
-
-  function getSubscribeSlug() {
-    const allCats = [...filters.categories];
-    // If exactly one category is selected, use its slug
-    const totalCategories = document.querySelectorAll('#dd-categories-options input').length;
-    if (allCats.length === 1) return slugifyCategory(allCats[0]);
-    // If all free-related (no way to tell), or all selected → 'all'
-    if (allCats.length === 0) return 'all';
-    if (allCats.length === totalCategories) return 'all';
-    return 'all';
-  }
-
-  function getSubscribeLabel() {
-    const slug = getSubscribeSlug();
-    if (slug === 'all') return 'All Events';
-    const allCats = [...filters.categories];
-    if (allCats.length === 1) return allCats[0];
-    return 'All Events';
-  }
-
   function getBaseUrl() {
     const loc = window.location;
     const pathParts = loc.pathname.split('/');
@@ -615,9 +592,7 @@
   }
 
   function showExportModal() {
-    const slug = getSubscribeSlug();
-    const baseUrl = getBaseUrl();
-    const url = `${baseUrl}/cal/${slug}.ics`;
+    const url = `${getBaseUrl()}/cal/all.ics`;
     const $modal = document.getElementById('export-modal');
     const $urlInput = document.getElementById('subscribe-url');
     const $copyBtn = document.getElementById('copy-url');
