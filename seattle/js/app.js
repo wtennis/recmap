@@ -90,6 +90,22 @@
     return !cost || cost === 'FREE' || cost === '$0' || cost === 0;
   }
 
+  // ---- Date Filtering ----
+  // Nothing in this file used to check date_range against today, so expired
+  // events from past seasons kept showing on the map/schedule indefinitely
+  // (see prior seasons' curated data still containing months-old events).
+  // isEventActive() is the fix; every render path below filters through it.
+
+  const TODAY = new Date();
+  TODAY.setHours(0, 0, 0, 0);
+
+  function isEventActive(evt) {
+    if (!evt.date_range) return true; // no date range printed = always show
+    const parsed = parseDateRange(evt.date_range);
+    if (!parsed) return true; // unparseable date_range = don't hide it, just in case
+    return TODAY >= parsed.start && TODAY <= parsed.end;
+  }
+
   // ---- Day Expansion ----
 
   const DAY_MAP = {
@@ -132,8 +148,8 @@
   // ---- Filter Logic ----
 
   function locationPassesFilter(loc) {
-    const events = loc.events || [];
-    if (events.length === 0) return true; // always show "coming soon" on map
+    const events = (loc.events || []).filter(isEventActive);
+    if (events.length === 0) return true; // no active programming — show as "coming soon"
 
     // Center filter
     if (!filters.centers.has(loc.name)) return false;
@@ -159,10 +175,13 @@
         ${location.phone ? `<div class="phone">${esc(location.phone)}</div>` : ''}
       </div>`;
 
-    const events = (location.events || []).filter(eventPassesCategoryFilter);
+    const activeEvents = (location.events || []).filter(isEventActive);
+    const events = activeEvents.filter(eventPassesCategoryFilter);
 
     if (events.length === 0 && (!location.events || location.events.length === 0)) {
       html += `<div class="popup-coming-soon">Programming data coming soon</div>`;
+    } else if (events.length === 0 && activeEvents.length === 0) {
+      html += `<div class="popup-coming-soon">This season's programming has ended — check back for the next schedule</div>`;
     } else if (events.length === 0) {
       html += `<div class="popup-coming-soon">No events match current filters</div>`;
     } else {
@@ -215,7 +234,7 @@
   function renderMarkers() {
     markersLayer.clearLayers();
     for (const loc of allLocations) {
-      const hasEvents = loc.events && loc.events.length > 0;
+      const hasEvents = loc.events && loc.events.some(isEventActive);
 
       // Skip centers that don't pass filter (but always show "coming soon")
       if (!locationPassesFilter(loc)) continue;
@@ -498,6 +517,7 @@
 
       for (const evt of events) {
         if (!eventPassesCategoryFilter(evt)) continue;
+        if (!isEventActive(evt)) continue;
 
         for (const session of (evt.sessions || [])) {
           const days = expandDays(session.day);
@@ -613,6 +633,7 @@
       for (const evt of events) {
         // Category filter
         if (!eventPassesCategoryFilter(evt)) continue;
+        if (!isEventActive(evt)) continue;
 
         for (const session of (evt.sessions || [])) {
           const days = expandDays(session.day);
