@@ -692,6 +692,7 @@
       html += `<div class="sc-time">${esc(evt.time)}`;
       if (evt.ages) html += ` · ${esc(evt.ages)}`;
       html += '</div>';
+      if (evt.date_range) html += `<div class="sc-dates">${esc(evt.date_range)}</div>`;
       html += '<div class="sc-tags">';
       html += `<span class="sc-tag cat">${esc(evt.category)}</span>`;
       html += `<span class="sc-tag ${costClass}">${esc(costLabel)}</span>`;
