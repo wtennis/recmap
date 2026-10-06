@@ -24,7 +24,18 @@
   const filters = {
     centers: new Set(),     // contains checked items; populated on data load
     categories: new Set(),  // contains checked items; populated on data load
+    ages: new Set(),        // contains checked age-group keys; populated on data load
   };
+
+  // Fixed age-group buckets (same classification HoopFinder uses, for consistency
+  // across both sites). Each is {value, label}: value is the internal filter key,
+  // label is what's shown in the dropdown.
+  const AGE_GROUPS = [
+    { value: 'adult', label: 'Adult' },
+    { value: 'teen', label: 'Teen (11-18)' },
+    { value: 'youth', label: 'Youth (<11)' },
+    { value: 'all', label: 'All Ages' },
+  ];
   let activeTab = 'map';    // 'map' or 'schedule'
   let activeDay = 'Monday';
   let filterBarOpen = false;
@@ -154,8 +165,8 @@
     // Center filter
     if (!filters.centers.has(loc.name)) return false;
 
-    // Category filter — location passes if ANY of its events match
-    const hasMatch = events.some(e => filters.categories.has(e.category));
+    // Category + age filter — location passes if ANY of its events match both
+    const hasMatch = events.some(e => filters.categories.has(e.category) && eventMatchesAgeFilter(e));
     if (!hasMatch) return false;
 
     return true;
@@ -163,6 +174,40 @@
 
   function eventPassesCategoryFilter(evt) {
     return filters.categories.has(evt.category);
+  }
+
+  // ---- Age Classification ----
+  // Buckets an event's free-text `ages` string (e.g. "Ages 18 and Older",
+  // "3-5", "All Ages") into one or more of: adult, teen, youth, all.
+  // Ported from HoopFinder's app.js for consistency between the two sites —
+  // ranges that straddle a bucket boundary (e.g. "Ages 10-17") fall back to
+  // matching every group rather than guessing, same as there.
+
+  function classifyAgeGroups(agesStr) {
+    if (!agesStr) return ['adult', 'teen', 'youth', 'all'];
+    const s = agesStr.toLowerCase();
+    if (s.includes('all ages')) return ['adult', 'teen', 'youth', 'all'];
+    if (s.includes('18 and older') || s.includes('18+')) return ['adult'];
+    if (s.match(/\d+\s+and\s+older/)) {
+      const m = s.match(/(\d+)\s+and\s+older/);
+      const age = parseInt(m[1]);
+      if (age <= 10) return ['adult', 'teen', 'youth', 'all'];
+      if (age <= 17) return ['teen', 'adult'];
+      return ['adult'];
+    }
+    const match = s.match(/(\d+)\s*[-–]\s*(\d+)/);
+    if (match) {
+      const low = parseInt(match[1]);
+      const high = parseInt(match[2]);
+      if (low >= 11 && high <= 19) return ['teen'];
+      if (high <= 12) return ['youth'];
+    }
+    if (s.includes('5 and under') || s.match(/\b[5-9]\b/) || s.includes('little') || s.includes('mini')) return ['youth'];
+    return ['adult', 'teen', 'youth', 'all'];
+  }
+
+  function eventMatchesAgeFilter(evt) {
+    return classifyAgeGroups(evt.ages).some(g => filters.ages.has(g));
   }
 
   // ---- Popup Content ----
@@ -176,7 +221,7 @@
       </div>`;
 
     const activeEvents = (location.events || []).filter(isEventActive);
-    const events = activeEvents.filter(eventPassesCategoryFilter);
+    const events = activeEvents.filter(e => eventPassesCategoryFilter(e) && eventMatchesAgeFilter(e));
 
     if (events.length === 0 && (!location.events || location.events.length === 0)) {
       html += `<div class="popup-coming-soon">Programming data coming soon</div>`;
@@ -287,6 +332,10 @@
   // ---- Dropdown Component ----
 
   function populateDropdown(containerId, items, filterSet) {
+    // Items are either plain strings (Centers/Categories: value === label) or
+    // {value, label} objects (Ages: a fixed internal key with a display label).
+    const normalized = items.map(it => (typeof it === 'string' ? { value: it, label: it } : it));
+
     const optionsEl = document.getElementById(containerId + '-options');
     const dropdown = document.getElementById(containerId);
     const toggleBtn = dropdown.querySelector('.dropdown-toggle');
@@ -296,24 +345,24 @@
     const clearBtn = dropdown.querySelector('.dd-clear');
 
     // Initialize: all items selected
-    for (const item of items) filterSet.add(item);
+    for (const { value } of normalized) filterSet.add(value);
 
     optionsEl.innerHTML = '';
-    for (const item of items) {
-      const label = document.createElement('label');
+    for (const { value, label } of normalized) {
+      const labelEl = document.createElement('label');
       const cb = document.createElement('input');
       cb.type = 'checkbox';
-      cb.value = item;
+      cb.value = value;
       cb.checked = true;
-      label.appendChild(cb);
-      label.appendChild(document.createTextNode(item));
-      optionsEl.appendChild(label);
+      labelEl.appendChild(cb);
+      labelEl.appendChild(document.createTextNode(label));
+      optionsEl.appendChild(labelEl);
 
       cb.addEventListener('change', function () {
         if (this.checked) {
-          filterSet.add(item);
+          filterSet.add(value);
         } else {
-          filterSet.delete(item);
+          filterSet.delete(value);
         }
         updateCount();
         applyFilters();
@@ -321,7 +370,7 @@
     }
 
     function updateCount() {
-      if (filterSet.size === items.length) {
+      if (filterSet.size === normalized.length) {
         countEl.textContent = 'All';
       } else {
         countEl.textContent = filterSet.size + ' selected';
@@ -340,7 +389,7 @@
 
     // Select All
     selectAllBtn.addEventListener('click', function () {
-      for (const item of items) filterSet.add(item);
+      for (const { value } of normalized) filterSet.add(value);
       optionsEl.querySelectorAll('input').forEach(c => { c.checked = true; });
       updateCount();
       applyFilters();
@@ -517,6 +566,7 @@
 
       for (const evt of events) {
         if (!eventPassesCategoryFilter(evt)) continue;
+        if (!eventMatchesAgeFilter(evt)) continue;
         if (!isEventActive(evt)) continue;
 
         for (const session of (evt.sessions || [])) {
@@ -633,6 +683,7 @@
       for (const evt of events) {
         // Category filter
         if (!eventPassesCategoryFilter(evt)) continue;
+        if (!eventMatchesAgeFilter(evt)) continue;
         if (!isEventActive(evt)) continue;
 
         for (const session of (evt.sessions || [])) {
@@ -728,6 +779,7 @@
 
       populateDropdown('dd-centers', centersWithEvents, filters.centers);
       populateDropdown('dd-categories', categories, filters.categories);
+      populateDropdown('dd-ages', AGE_GROUPS, filters.ages);
 
       // Calendar export modal
       document.getElementById('export-cal').addEventListener('click', showExportModal);

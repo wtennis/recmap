@@ -343,6 +343,8 @@ html, body {
   display: flex;
   gap: 10px;
   align-items: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ---- Dropdown Component ---- */
