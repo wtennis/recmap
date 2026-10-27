@@ -580,12 +580,14 @@ html, body {
 .schedule-card .sc-tag.paid { background: #fee2e2; color: #991b1b; }
 .schedule-card .sc-tag.reg { background: #fef3c7; color: #92400e; }
 
-/* ---- Turnout report (demand test) ---- */
+/* ---- "I'm going / I went" report menu (demand test) ---- */
 
-.turnout-btn {
-  display: inline-block;
+.report {
   margin-top: 6px;
-  padding: 3px 8px;
+}
+
+.report-toggle,
+.report-opt {
   font: inherit;
   font-size: 12px;
   font-weight: 600;
@@ -596,19 +598,45 @@ html, body {
   cursor: pointer;
 }
 
-.turnout-btn:hover {
+.report-toggle {
+  padding: 3px 8px;
+}
+
+.report-options {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.report-options[hidden] {
+  display: none;
+}
+
+.report-opt {
+  padding: 6px 8px;
+  text-align: left;
+}
+
+.report-toggle:hover,
+.report-opt:not(:disabled):hover {
   background: var(--accent-light);
 }
 
-.turnout-thanks {
-  display: block;
-  margin-top: 6px;
-  padding: 0;
-  font: inherit;
+.report-opt:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.report-opt.chosen {
+  opacity: 1;
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.report-thanks {
+  margin-top: 4px;
   font-size: 12px;
-  background: none;
-  border: none;
-  text-align: left;
   font-style: italic;
   color: var(--accent-dark);
 }

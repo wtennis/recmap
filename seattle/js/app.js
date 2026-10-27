@@ -109,23 +109,80 @@
     } catch (e) { /* analytics must never break the app */ }
   }
 
-  // "Report turnout" button: a demand test for a future turnout-report feature.
-  // Clicking it only logs an event and shows a "coming soon" note; no backend.
-  function turnoutButtonHTML(program, center) {
-    return `<button type="button" class="turnout-btn" data-program="${escAttr(program)}" data-center="${escAttr(center)}">📣 Report turnout</button>`;
+  // "I'm going / I went" menu: a demand test for future attendance/turnout
+  // reports. Picking an option only logs a GoatCounter event and remembers the
+  // choice in this browser; nothing is shared with other visitors yet.
+  const REPORT_OPTIONS = [
+    { key: 'plan', label: '🗓️ I plan to go this week' },
+    { key: 'went-good', label: '👍 I went — good turnout' },
+    { key: 'went-low', label: '👎 I went — low turnout' },
+    { key: 'not-running', label: '🚫 I went — it wasn’t happening' },
+  ];
+  const REPORT_TTL_MS = 7 * 24 * 60 * 60 * 1000; // choices reset weekly
+  const REPORT_STORAGE_PREFIX = 'recmap-report:';
+
+  // Registration codes are (nearly) unique; many events share center + program
+  // name (e.g. the same class on Tue and Thu), so only fall back to that.
+  function reportId(evt, center) {
+    return evt.code ? String(evt.code) : `${center}|${evt.program}|${evt.date_range || ''}`;
+  }
+
+  function getStoredReport(id) {
+    try {
+      const saved = JSON.parse(localStorage.getItem(REPORT_STORAGE_PREFIX + id));
+      if (saved && Date.now() - saved.t < REPORT_TTL_MS) return saved.key;
+    } catch (e) { /* storage unavailable: just show a fresh menu */ }
+    return null;
+  }
+
+  function storeReport(id, key) {
+    try {
+      localStorage.setItem(REPORT_STORAGE_PREFIX + id, JSON.stringify({ key: key, t: Date.now() }));
+    } catch (e) { /* storage unavailable: choice just won't persist */ }
+  }
+
+  function reportWidgetHTML(evt, center) {
+    const id = reportId(evt, center);
+    const chosen = getStoredReport(id);
+    let html = `<div class="report" data-id="${escAttr(id)}" data-program="${escAttr(evt.program)}" data-center="${escAttr(center)}">`;
+    html += `<button type="button" class="report-toggle"${chosen ? ' hidden' : ''}>📣 I'm going / I went</button>`;
+    html += `<div class="report-options"${chosen ? '' : ' hidden'}>`;
+    for (const opt of REPORT_OPTIONS) {
+      const isChosen = opt.key === chosen;
+      html += `<button type="button" class="report-opt${isChosen ? ' chosen' : ''}" data-key="${opt.key}"${chosen ? ' disabled' : ''}>${esc(opt.label)}</button>`;
+    }
+    html += `</div>`;
+    if (chosen) html += `<div class="report-thanks">Thanks! Sharing these with other visitors is coming soon.</div>`;
+    html += `</div>`;
+    return html;
   }
 
   // Delegated, since popups and schedule cards are re-rendered constantly.
+  // Never remove the clicked node: Leaflet decides whether a click was "inside
+  // the popup" by walking up from e.target, and a detached target makes it
+  // treat the click as a map click and close the popup.
   document.addEventListener('click', function (e) {
-    const btn = e.target.closest('.turnout-btn');
-    if (btn) {
-      track(`turnout/${btn.dataset.center}/${btn.dataset.program}`, `Turnout click: ${btn.dataset.program} @ ${btn.dataset.center}`);
-      // Morph in place rather than replacing the node: Leaflet decides whether a
-      // click was "inside the popup" by walking up from e.target, and a detached
-      // target makes it treat the click as a map click and close the popup.
-      btn.disabled = true;
-      btn.className = 'turnout-thanks';
-      btn.textContent = 'Thanks! Turnout reports are coming soon.';
+    const toggle = e.target.closest('.report-toggle');
+    if (toggle) {
+      const widget = toggle.closest('.report');
+      widget.querySelector('.report-options').hidden = false;
+      toggle.hidden = true;
+      track('report/open');
+      return;
+    }
+    const opt = e.target.closest('.report-opt');
+    if (opt && !opt.disabled) {
+      const widget = opt.closest('.report');
+      const { id, program, center } = widget.dataset;
+      const key = opt.dataset.key;
+      storeReport(id, key);
+      track(`report/${key}/${center}/${program}`, `Report (${key}): ${program} @ ${center} [${id}]`);
+      widget.querySelectorAll('.report-opt').forEach(b => { b.disabled = true; });
+      opt.classList.add('chosen');
+      const thanks = document.createElement('div');
+      thanks.className = 'report-thanks';
+      thanks.textContent = 'Thanks! Sharing these with other visitors is coming soon.';
+      widget.appendChild(thanks);
       return;
     }
     const dir = e.target.closest('.popup-directions');
@@ -303,7 +360,7 @@
           html += `</div>`;
 
           if (evt.notes) html += `<div class="event-detail" style="font-style:italic; margin-top:4px;">${esc(evt.notes)}</div>`;
-          html += turnoutButtonHTML(evt.program, location.name);
+          html += reportWidgetHTML(evt, location.name);
           html += `</div>`;
         }
         html += `</div>`;
@@ -327,7 +384,8 @@
 
       const latlng = [loc.lat, loc.lng];
       const marker = hasEvents ? activeMarker(latlng) : pendingMarker(latlng);
-      marker.bindPopup(buildPopupHTML(loc), {
+      // Function content is rebuilt on each open, so saved report choices show.
+      marker.bindPopup(() => buildPopupHTML(loc), {
         maxWidth: 340, maxHeight: 450, autoPanPadding: [20, 60],
       });
       marker.on('popupopen', function () { track(`popup/${loc.name}`); });
@@ -737,6 +795,7 @@
           if (days.includes(day)) {
             results.push({
               program: evt.program,
+              code: evt.code,
               category: evt.category,
               activity: evt.activity,
               center: loc.name,
@@ -798,7 +857,7 @@
         html += '<span class="sc-tag reg">Registration</span>';
       }
       html += '</div>';
-      html += turnoutButtonHTML(evt.program, evt.center);
+      html += reportWidgetHTML(evt, evt.center);
       html += '</div>';
     }
     $scheduleList.innerHTML = html;
