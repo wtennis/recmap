@@ -580,6 +580,39 @@ html, body {
 .schedule-card .sc-tag.paid { background: #fee2e2; color: #991b1b; }
 .schedule-card .sc-tag.reg { background: #fef3c7; color: #92400e; }
 
+/* ---- Turnout report (demand test) ---- */
+
+.turnout-btn {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 8px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-light);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.turnout-btn:hover {
+  background: var(--accent-light);
+}
+
+.turnout-thanks {
+  display: block;
+  margin-top: 6px;
+  padding: 0;
+  font: inherit;
+  font-size: 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-style: italic;
+  color: var(--accent-dark);
+}
+
 .schedule-empty {
   text-align: center;
   color: #aaa;

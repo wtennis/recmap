@@ -92,6 +92,46 @@
     return div.innerHTML;
   }
 
+  function escAttr(str) {
+    return esc(str).replace(/"/g, '&quot;');
+  }
+
+  // ---- Analytics ----
+  // GoatCounter custom events. count.js loads async after this file, so check
+  // at call time; no-ops if it's blocked or hasn't loaded (and GoatCounter
+  // ignores localhost by default, so local testing doesn't pollute stats).
+
+  function track(path, title) {
+    try {
+      if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+        window.goatcounter.count({ path: path, title: title || path, event: true });
+      }
+    } catch (e) { /* analytics must never break the app */ }
+  }
+
+  // "Report turnout" button: a demand test for a future turnout-report feature.
+  // Clicking it only logs an event and shows a "coming soon" note; no backend.
+  function turnoutButtonHTML(program, center) {
+    return `<button type="button" class="turnout-btn" data-program="${escAttr(program)}" data-center="${escAttr(center)}">📣 Report turnout</button>`;
+  }
+
+  // Delegated, since popups and schedule cards are re-rendered constantly.
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.turnout-btn');
+    if (btn) {
+      track(`turnout/${btn.dataset.center}/${btn.dataset.program}`, `Turnout click: ${btn.dataset.program} @ ${btn.dataset.center}`);
+      // Morph in place rather than replacing the node: Leaflet decides whether a
+      // click was "inside the popup" by walking up from e.target, and a detached
+      // target makes it treat the click as a map click and close the popup.
+      btn.disabled = true;
+      btn.className = 'turnout-thanks';
+      btn.textContent = 'Thanks! Turnout reports are coming soon.';
+      return;
+    }
+    const dir = e.target.closest('.popup-directions');
+    if (dir) track(`directions/${dir.dataset.center}`);
+  });
+
   function formatCost(cost) {
     if (!cost || cost === 'FREE' || cost === '$0' || cost === 0) return 'Free';
     return String(cost);
@@ -263,6 +303,7 @@
           html += `</div>`;
 
           if (evt.notes) html += `<div class="event-detail" style="font-style:italic; margin-top:4px;">${esc(evt.notes)}</div>`;
+          html += turnoutButtonHTML(evt.program, location.name);
           html += `</div>`;
         }
         html += `</div>`;
@@ -270,7 +311,7 @@
     }
 
     const addr = encodeURIComponent(location.address + ', Seattle, WA');
-    html += `<a class="popup-directions" href="https://www.google.com/maps/dir/?api=1&destination=${addr}" target="_blank" rel="noopener">Get Directions</a>`;
+    html += `<a class="popup-directions" data-center="${escAttr(location.name)}" href="https://www.google.com/maps/dir/?api=1&destination=${addr}" target="_blank" rel="noopener">Get Directions</a>`;
     return html;
   }
 
@@ -289,6 +330,7 @@
       marker.bindPopup(buildPopupHTML(loc), {
         maxWidth: 340, maxHeight: 450, autoPanPadding: [20, 60],
       });
+      marker.on('popupopen', function () { track(`popup/${loc.name}`); });
       marker.addTo(markersLayer);
     }
   }
@@ -366,6 +408,7 @@
         }
         updateCount();
         applyFilters();
+        track(`filter/${containerId}`);
       });
     }
 
@@ -426,6 +469,7 @@
   // ---- Tab Switching ----
 
   function switchTab(tab) {
+    if (tab !== activeTab) track(`tab/${tab}`);
     activeTab = tab;
     $tabMap.classList.toggle('active', tab === 'map');
     $tabSchedule.classList.toggle('active', tab === 'schedule');
@@ -639,6 +683,7 @@
   }
 
   function downloadICS() {
+    track('export/ics-download');
     const events = getFilteredEvents();
     const ics = generateICS(events);
     const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
@@ -662,6 +707,7 @@
   }
 
   function showExportModal() {
+    track('export/modal-open');
     const url = `${getBaseUrl()}/cal/all.ics`;
     const $modal = document.getElementById('export-modal');
     const $urlInput = document.getElementById('subscribe-url');
@@ -720,6 +766,7 @@
       btn.addEventListener('click', function () {
         activeDay = day;
         renderSchedule();
+        track(`day/${DAY_ABBR[day]}`);
       });
       $dayTabs.appendChild(btn);
     }
@@ -751,6 +798,7 @@
         html += '<span class="sc-tag reg">Registration</span>';
       }
       html += '</div>';
+      html += turnoutButtonHTML(evt.program, evt.center);
       html += '</div>';
     }
     $scheduleList.innerHTML = html;
@@ -794,6 +842,7 @@
       });
 
       document.getElementById('copy-url').addEventListener('click', function () {
+        track('export/copy-subscribe-url');
         const $url = document.getElementById('subscribe-url');
         navigator.clipboard.writeText($url.value).then(function () {
           document.getElementById('copy-url').textContent = 'Copied!';
