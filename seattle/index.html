@@ -110,6 +110,26 @@
     </div>
   </div>
 
+  <!-- Feedback Modal (opens after a report-menu choice) -->
+  <div id="feedback-modal" class="modal hidden">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+      <h2 id="feedback-title">Tell us more?</h2>
+      <p id="feedback-context" class="modal-desc"></p>
+      <form id="feedback-form">
+        <textarea name="message" class="feedback-input" rows="4" maxlength="2000" required
+          placeholder="e.g. Only 6 people showed up, or the gym was closed for an event"></textarea>
+        <input name="email" class="feedback-input" type="email" autocomplete="email"
+          placeholder="Your email (optional, if you'd like a reply)">
+        <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+        <p id="feedback-status" class="feedback-status" hidden></p>
+        <div class="feedback-actions">
+          <button type="button" id="feedback-skip" class="modal-done">No thanks</button>
+          <button type="submit" id="feedback-send" class="feedback-send">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="

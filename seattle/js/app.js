@@ -109,15 +109,21 @@
     } catch (e) { /* analytics must never break the app */ }
   }
 
-  // "I'm going / I went" menu: a demand test for future attendance/turnout
-  // reports. Picking an option only logs a GoatCounter event and remembers the
-  // choice in this browser; nothing is shared with other visitors yet.
+  // "I'm going / I went" menu: a demand test for future attendance/experience
+  // reports. Picking an option logs a GoatCounter event, remembers the choice
+  // in this browser, and offers the feedback dialog; nothing is shared with
+  // other visitors yet.
   const REPORT_OPTIONS = [
     { key: 'plan', label: '🗓️ I plan to go this week' },
-    { key: 'went-good', label: '👍 I went — good turnout' },
-    { key: 'went-low', label: '👎 I went — low turnout' },
-    { key: 'not-running', label: '🚫 I went — it wasn’t happening' },
+    { key: 'went-good', label: '👍 I went — good experience' },
+    { key: 'went-poor', label: '👎 I went — poor experience' },
+    { key: 'not-running', label: '🚫 This program is not happening' },
   ];
+
+  // Feedback dialog → email to the RecMap admin via Web3Forms (static-site form
+  // relay; the access key is designed to be public). Empty key = dialog off.
+  const FEEDBACK_ACCESS_KEY = '';
+  const FEEDBACK_ENDPOINT = 'https://api.web3forms.com/submit';
   const REPORT_TTL_MS = 7 * 24 * 60 * 60 * 1000; // choices reset weekly
   const REPORT_STORAGE_PREFIX = 'recmap-report:';
 
@@ -130,7 +136,8 @@
   function getStoredReport(id) {
     try {
       const saved = JSON.parse(localStorage.getItem(REPORT_STORAGE_PREFIX + id));
-      if (saved && Date.now() - saved.t < REPORT_TTL_MS) return saved.key;
+      if (saved && Date.now() - saved.t < REPORT_TTL_MS &&
+          REPORT_OPTIONS.some(o => o.key === saved.key)) return saved.key;
     } catch (e) { /* storage unavailable: just show a fresh menu */ }
     return null;
   }
@@ -183,10 +190,99 @@
       thanks.className = 'report-thanks';
       thanks.textContent = 'Thanks! Sharing these with other visitors is coming soon.';
       widget.appendChild(thanks);
+      openFeedbackModal({
+        id: id, program: program, center: center, key: key,
+        label: REPORT_OPTIONS.find(o => o.key === key).label,
+      });
       return;
     }
     const dir = e.target.closest('.popup-directions');
     if (dir) track(`directions/${dir.dataset.center}`);
+  });
+
+  // ---- Feedback Dialog ----
+
+  const $feedbackModal = document.getElementById('feedback-modal');
+  const $feedbackForm = document.getElementById('feedback-form');
+  const $feedbackStatus = document.getElementById('feedback-status');
+  const $feedbackSend = document.getElementById('feedback-send');
+  let feedbackReport = null; // the report the open dialog is about
+
+  function openFeedbackModal(report) {
+    if (!FEEDBACK_ACCESS_KEY) return;
+    feedbackReport = report;
+    document.getElementById('feedback-context').textContent =
+      `You chose “${report.label}” for ${report.program} at ${report.center}. ` +
+      'Anything else the RecMap admin should know? This goes privately to the admin, not to other visitors.';
+    $feedbackForm.reset();
+    $feedbackStatus.hidden = true;
+    $feedbackSend.disabled = false;
+    $feedbackModal.classList.remove('hidden');
+    track('feedback/open');
+  }
+
+  function closeFeedbackModal(reason) {
+    if ($feedbackModal.classList.contains('hidden')) return;
+    $feedbackModal.classList.add('hidden');
+    if (reason) track(`feedback/${reason}`);
+  }
+
+  function showFeedbackStatus(text) {
+    $feedbackStatus.textContent = text;
+    $feedbackStatus.hidden = false;
+  }
+
+  $feedbackForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const r = feedbackReport;
+    // Honeypot: bots tick hidden checkboxes; pretend it worked.
+    if ($feedbackForm.botcheck.checked) { closeFeedbackModal(); return; }
+
+    const email = $feedbackForm.email.value.trim();
+    const payload = {
+      access_key: FEEDBACK_ACCESS_KEY,
+      subject: `RecMap feedback: ${r.label} — ${r.program} @ ${r.center}`,
+      from_name: 'RecMap',
+      report: r.label,
+      program: r.program,
+      center: r.center,
+      registration_code: r.id,
+      message: $feedbackForm.message.value.trim(),
+      page: window.location.href,
+    };
+    if (email) { payload.email = email; payload.replyto = email; }
+
+    $feedbackSend.disabled = true;
+    showFeedbackStatus('Sending…');
+    try {
+      const res = await fetch(FEEDBACK_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) throw new Error(json.message || `HTTP ${res.status}`);
+      showFeedbackStatus('Sent — thank you!');
+      track('feedback/sent');
+      setTimeout(() => closeFeedbackModal(), 1500);
+    } catch (err) {
+      console.error('RecMap feedback failed:', err);
+      showFeedbackStatus('Sorry, that didn’t send. Please try again later.');
+      $feedbackSend.disabled = false;
+      track('feedback/error');
+    }
+  });
+
+  document.getElementById('feedback-skip').addEventListener('click', function () {
+    closeFeedbackModal('skip');
+  });
+
+  $feedbackModal.addEventListener('click', function (e) {
+    if (e.target === this) closeFeedbackModal('skip');
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeFeedbackModal('skip');
   });
 
   function formatCost(cost) {

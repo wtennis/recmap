@@ -782,6 +782,56 @@ html, body {
 
 .modal-done:hover { background: #e0e0e0; }
 
+/* ---- Feedback Modal ---- */
+
+.feedback-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 14px;
+  color: #333;
+  resize: vertical;
+}
+
+.feedback-input:focus {
+  outline: 2px solid var(--accent-light);
+  border-color: var(--accent);
+}
+
+.feedback-status {
+  font-size: 13px;
+  color: var(--accent-dark);
+  margin-bottom: 10px;
+}
+
+.feedback-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.feedback-actions .modal-done,
+.feedback-send {
+  flex: 1;
+}
+
+.feedback-send {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feedback-send:hover { background: var(--accent-dark); }
+.feedback-send:disabled { opacity: 0.6; cursor: default; }
+
 /* ---- Responsive ---- */
 
 @media (min-width: 768px) {
