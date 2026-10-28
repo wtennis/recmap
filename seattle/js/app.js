@@ -122,7 +122,7 @@
 
   // Feedback dialog → email to the RecMap admin via Web3Forms (static-site form
   // relay; the access key is designed to be public). Empty key = dialog off.
-  const FEEDBACK_ACCESS_KEY = '';
+  const FEEDBACK_ACCESS_KEY = '95849b83-d5c5-4122-82b5-ec7043f8bf42';
   const FEEDBACK_ENDPOINT = 'https://api.web3forms.com/submit';
   const REPORT_TTL_MS = 7 * 24 * 60 * 60 * 1000; // choices reset weekly
   const REPORT_STORAGE_PREFIX = 'recmap-report:';
