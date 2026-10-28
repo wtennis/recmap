@@ -507,7 +507,7 @@ html, body {
 /* ---- Schedule List ---- */
 
 #schedule-list {
-  padding: 12px 16px 24px;
+  padding: 12px 16px 80px; /* bottom room so the feedback button never covers the last card */
   flex: 1;
   overflow-y: auto;
 }
@@ -816,6 +816,30 @@ html, body {
 }
 
 .feedback-send:hover { background: var(--accent-dark); }
+
+/* Floating "Feedback" button: bottom-right, above map tiles/controls, below modals */
+.feedback-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1001;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.feedback-fab:hover { background: var(--accent-dark); }
+.feedback-fab[hidden] { display: none; }
+
+/* On the map, clear Leaflet's bottom-right attribution */
+.map-view .feedback-fab { bottom: 32px; }
 .feedback-send:disabled { opacity: 0.6; cursor: default; }
 
 /* ---- Responsive ---- */
@@ -840,7 +864,7 @@ html, body {
   #schedule-list {
     max-width: 640px;
     margin: 0 auto;
-    padding: 16px 24px 32px;
+    padding: 16px 24px 80px;
   }
 
   .day-tabs {
@@ -853,4 +877,7 @@ html, body {
   .header-content h1 span {
     display: none;
   }
+
+  /* Zoom control moves to bottom-right on phones (see app.js); sit above it */
+  .map-view .feedback-fab { bottom: 100px; }
 }

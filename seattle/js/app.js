@@ -239,25 +239,43 @@
   const $feedbackForm = document.getElementById('feedback-form');
   const $feedbackStatus = document.getElementById('feedback-status');
   const $feedbackSend = document.getElementById('feedback-send');
-  let feedbackReport = null; // the report the open dialog is about
+  const $feedbackFab = document.getElementById('feedback-fab');
+  const REPORT_PLACEHOLDER = $feedbackForm.message.placeholder;
+  const GENERAL_PLACEHOLDER = 'e.g. A program is missing, a time is wrong, or an idea for the site';
+  // The report the open dialog is about, or null for general feedback (FAB).
+  let feedbackReport = null;
+
+  // Report follow-ups and general feedback are counted separately.
+  function feedbackEvent(what) {
+    return `${feedbackReport ? 'feedback' : 'feedback-general'}/${what}`;
+  }
 
   function openFeedbackModal(report) {
     if (!FEEDBACK_ACCESS_KEY) return;
     feedbackReport = report;
-    document.getElementById('feedback-context').textContent =
-      `You chose “${report.label}” for ${report.program} at ${report.center}. ` +
-      'Anything else the RecMap admin should know? This goes privately to the admin, not to other visitors.';
+    document.getElementById('feedback-title').textContent = report ? 'Tell us more?' : 'Send feedback';
+    document.getElementById('feedback-context').textContent = report
+      ? `You chose “${report.label}” for ${report.program} at ${report.center}. ` +
+        'Anything else the RecMap admin should know? This goes privately to the admin, not to other visitors.'
+      : 'Ideas, bugs, a missing or wrong program: anything about RecMap. ' +
+        'This goes privately to the RecMap admin.';
     $feedbackForm.reset();
+    $feedbackForm.message.placeholder = report ? REPORT_PLACEHOLDER : GENERAL_PLACEHOLDER;
     $feedbackStatus.hidden = true;
     $feedbackSend.disabled = false;
     $feedbackModal.classList.remove('hidden');
-    track('feedback/open');
+    track(feedbackEvent('open'));
   }
 
   function closeFeedbackModal(reason) {
     if ($feedbackModal.classList.contains('hidden')) return;
     $feedbackModal.classList.add('hidden');
-    if (reason) track(`feedback/${reason}`);
+    if (reason) track(feedbackEvent(reason));
+  }
+
+  if (FEEDBACK_ACCESS_KEY) {
+    $feedbackFab.hidden = false;
+    $feedbackFab.addEventListener('click', function () { openFeedbackModal(null); });
   }
 
   function showFeedbackStatus(text) {
@@ -274,15 +292,21 @@
     const email = $feedbackForm.email.value.trim();
     const payload = {
       access_key: FEEDBACK_ACCESS_KEY,
-      subject: `RecMap feedback: ${r.label} — ${r.program} @ ${r.center}`,
+      subject: r
+        ? `RecMap feedback: ${r.label} — ${r.program} @ ${r.center}`
+        : 'RecMap feedback: general',
       from_name: 'RecMap',
-      report: r.label,
-      program: r.program,
-      center: r.center,
-      registration_code: r.id,
       message: $feedbackForm.message.value.trim(),
       page: window.location.href,
     };
+    if (r) {
+      payload.report = r.label;
+      payload.program = r.program;
+      payload.center = r.center;
+      payload.registration_code = r.id;
+    } else {
+      payload.view = activeTab;
+    }
     if (email) { payload.email = email; payload.replyto = email; }
 
     $feedbackSend.disabled = true;
@@ -296,13 +320,13 @@
       const json = await res.json().catch(() => ({}));
       if (!res.ok || !json.success) throw new Error(json.message || `HTTP ${res.status}`);
       showFeedbackStatus('Sent — thank you!');
-      track('feedback/sent');
+      track(feedbackEvent('sent'));
       setTimeout(() => closeFeedbackModal(), 1500);
     } catch (err) {
       console.error('RecMap feedback failed:', err);
       showFeedbackStatus('Sorry, that didn’t send. Please try again later.');
       $feedbackSend.disabled = false;
-      track('feedback/error');
+      track(feedbackEvent('error'));
     }
   });
 
@@ -641,6 +665,7 @@
   function switchTab(tab) {
     if (tab !== activeTab) track(`tab/${tab}`);
     activeTab = tab;
+    document.body.classList.toggle('map-view', tab === 'map'); // repositions feedback button
     $tabMap.classList.toggle('active', tab === 'map');
     $tabSchedule.classList.toggle('active', tab === 'schedule');
 

@@ -12,7 +12,7 @@
     crossorigin="">
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="css/style.css?v=2026-10-27">
+  <link rel="stylesheet" href="css/style.css?v=2026-10-28">
 </head>
 <body>
 
@@ -109,7 +109,10 @@
     </div>
   </div>
 
-  <!-- Feedback Modal (opens after a report-menu choice) -->
+  <!-- General feedback button (shown by app.js when feedback is configured) -->
+  <button id="feedback-fab" class="feedback-fab" type="button" hidden>💬 Feedback</button>
+
+  <!-- Feedback Modal (opens after a report-menu choice, or from the feedback button) -->
   <div id="feedback-modal" class="modal hidden">
     <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
       <h2 id="feedback-title">Tell us more?</h2>
@@ -135,7 +138,7 @@
     crossorigin=""></script>
 
   <!-- App JS -->
-  <script src="js/app.js?v=2026-10-27"></script>
+  <script src="js/app.js?v=2026-10-28"></script>
 
   <!-- Analytics -->
   <script data-goatcounter="https://wht.goatcounter.com/count"
