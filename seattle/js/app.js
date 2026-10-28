@@ -36,13 +36,45 @@
     { value: 'youth', label: 'Youth (<11)' },
     { value: 'all', label: 'All Ages' },
   ];
+  // City areas, each with a fixed color (dataviz default categorical slots 1-5,
+  // validated for colorblind separation). Colors appear on map markers and the
+  // schedule-card stripe; the area name is always shown as text too.
+  const AREAS = [
+    { name: 'North', color: '#2a78d6' },
+    { name: 'Northeast', color: '#e87ba4' },
+    { name: 'Central', color: '#eb6834' },
+    { name: 'Southeast', color: '#1baf7a' },
+    { name: 'West Seattle & South', color: '#eda100' },
+  ];
+  const CENTER_AREA = {
+    'Ballard': 'North', 'Bitter Lake': 'North', 'Green Lake': 'North',
+    'Loyal Heights': 'North', 'Northgate': 'North',
+    'Laurelhurst': 'Northeast', 'Magnuson': 'Northeast', 'Meadowbrook': 'Northeast',
+    'Ravenna-Eckstein': 'Northeast',
+    'Garfield': 'Central', 'International District': 'Central', 'Magnolia': 'Central',
+    'Miller': 'Central', 'Montlake': 'Central', 'Queen Anne': 'Central', 'Yesler': 'Central',
+    'Jefferson Park': 'Southeast', 'Rainier': 'Southeast', 'Rainier Beach': 'Southeast',
+    'Van Asselt': 'Southeast',
+    'Delridge': 'West Seattle & South', 'Hiawatha': 'West Seattle & South',
+    'High Point': 'West Seattle & South', 'South Park': 'West Seattle & South',
+  };
+  const NO_AREA_COLOR = '#0d9488'; // teal fallback for a center missing from CENTER_AREA
+
+  // Center names in the data carry a " Community Center" suffix.
+  function areaFor(centerName) {
+    const short = String(centerName || '').replace(/ Community Center$/, '');
+    return AREAS.find(a => a.name === CENTER_AREA[short]) || null;
+  }
+
+  function areaColor(centerName) {
+    const area = areaFor(centerName);
+    return area ? area.color : NO_AREA_COLOR;
+  }
+
   let activeTab = 'schedule'; // 'map' or 'schedule'; schedule is the landing view
   let activeDay = 'Monday';
-  let filterBarOpen = false;
 
   // ---- DOM refs ----
-  const $filterToggle = document.getElementById('filter-toggle');
-  const $filterBar = document.getElementById('filter-bar');
   const $tabMap = document.getElementById('tab-map');
   const $tabSchedule = document.getElementById('tab-schedule');
   const $schedulePanel = document.getElementById('schedule-panel');
@@ -69,10 +101,11 @@
 
   // ---- Marker Styles ----
 
-  function activeMarker(latlng) {
+  // White ring keeps adjacent/overlapping markers distinct on busy map tiles.
+  function activeMarker(latlng, color) {
     return L.circleMarker(latlng, {
-      radius: 8, fillColor: '#0d9488', color: '#0f766e',
-      weight: 1.5, opacity: 1, fillOpacity: 0.85,
+      radius: 8, fillColor: color, color: '#ffffff',
+      weight: 2, opacity: 1, fillOpacity: 0.95,
     });
   }
 
@@ -479,7 +512,7 @@
       if (!locationPassesFilter(loc)) continue;
 
       const latlng = [loc.lat, loc.lng];
-      const marker = hasEvents ? activeMarker(latlng) : pendingMarker(latlng);
+      const marker = hasEvents ? activeMarker(latlng, areaColor(loc.name)) : pendingMarker(latlng);
       // Function content is rebuilt on each open, so saved report choices show.
       marker.bindPopup(() => buildPopupHTML(loc), {
         maxWidth: 340, maxHeight: 450, autoPanPadding: [20, 60],
@@ -496,8 +529,9 @@
   function addLegend() {
     legendEl = document.createElement('div');
     legendEl.id = 'legend';
-    legendEl.innerHTML = `
-      <div class="legend-item"><span class="legend-dot teal"></span> Has Programming</div>
+    legendEl.innerHTML = AREAS.map(a =>
+      `<div class="legend-item"><span class="legend-dot" style="background:${a.color}"></span> ${esc(a.name)}</div>`
+    ).join('') + `
       <div class="legend-item"><span class="legend-dot gray"></span> Coming Soon</div>
     `;
     document.body.appendChild(legendEl);
@@ -506,24 +540,6 @@
   function showLegend(show) {
     if (legendEl) legendEl.style.display = show ? '' : 'none';
   }
-
-  // ---- Filter Bar Toggle ----
-
-  function toggleFilterBar() {
-    filterBarOpen = !filterBarOpen;
-    $filterBar.classList.toggle('hidden', !filterBarOpen);
-    $filterToggle.classList.toggle('active', filterBarOpen);
-    document.body.classList.toggle('filter-open', filterBarOpen);
-
-    // Close any open dropdown panels
-    if (!filterBarOpen) {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.add('hidden'));
-    }
-
-    map.invalidateSize();
-  }
-
-  $filterToggle.addEventListener('click', toggleFilterBar);
 
   // ---- Dropdown Component ----
 
@@ -939,9 +955,12 @@
       const costLabel = formatCost(evt.cost);
       const costClass = isFreeEvent(evt.cost) ? 'free' : 'paid';
 
-      html += '<div class="schedule-card">';
+      const area = areaFor(evt.center);
+      html += `<div class="schedule-card" style="border-left-color:${area ? area.color : NO_AREA_COLOR}">`;
       html += `<div class="sc-program">${esc(evt.program)}</div>`;
-      html += `<div class="sc-center">${esc(evt.center)}</div>`;
+      html += `<div class="sc-center">${esc(evt.center)}`;
+      if (area) html += ` <span class="sc-area">· ${esc(area.name)}</span>`;
+      html += '</div>';
       html += `<div class="sc-time">${esc(evt.time)}`;
       if (evt.ages) html += ` · ${esc(evt.ages)}`;
       html += '</div>';

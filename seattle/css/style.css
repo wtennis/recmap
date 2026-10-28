@@ -23,14 +23,12 @@ html, body {
 
 :root {
   --header-h: 44px;
-  --filter-bar-h: 0px;
+  --filter-bar-h: 44px;     /* filter bar is always shown */
   --accent: #0d9488;        /* teal-600 */
   --accent-dark: #0f766e;   /* teal-700 */
   --accent-light: #ccfbf1;  /* teal-100 */
   --accent-bg: #f0fdfa;     /* teal-50 */
 }
-
-.filter-open { --filter-bar-h: 44px; }
 
 /* ---- Header ---- */
 
@@ -76,21 +74,6 @@ html, body {
   align-items: center;
   gap: 12px;
 }
-
-/* Filter toggle — understated text button */
-.filter-btn {
-  background: none;
-  color: #999;
-  border: none;
-  padding: 4px 8px;
-  font-size: 12px;
-  font-weight: 500;
-  cursor: pointer;
-  letter-spacing: 0.3px;
-}
-
-.filter-btn:hover { color: #ccc; }
-.filter-btn.active { color: var(--accent); }
 
 /* View tabs — grouped toggle pair */
 .tab-group {
@@ -301,8 +284,11 @@ html, body {
   flex-shrink: 0;
 }
 
-.legend-dot.teal    { background: var(--accent); }
 .legend-dot.gray    { background: #94a3b8; }
+
+.schedule-card .sc-area {
+  color: #888;
+}
 
 /* ---- Season Banner ---- */
 
@@ -857,8 +843,6 @@ html, body {
     padding: 16px 24px 32px;
   }
 
-  .filter-open { --filter-bar-h: 44px; }
-
   .day-tabs {
     width: auto;
     flex: 1;
@@ -869,6 +853,4 @@ html, body {
   .header-content h1 span {
     display: none;
   }
-
-  .filter-open { --filter-bar-h: 44px; }
 }
