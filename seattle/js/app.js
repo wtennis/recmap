@@ -36,7 +36,7 @@
     { value: 'youth', label: 'Youth (<11)' },
     { value: 'all', label: 'All Ages' },
   ];
-  let activeTab = 'map';    // 'map' or 'schedule'
+  let activeTab = 'schedule'; // 'map' or 'schedule'; schedule is the landing view
   let activeDay = 'Monday';
   let filterBarOpen = false;
 
@@ -1005,11 +1005,13 @@
       });
 
       markersLayer.addTo(map);
-      renderMarkers();
 
       // Set initial active day to today (if a weekday name)
       const todayName = DAY_ORDER[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1];
       activeDay = todayName;
+
+      // First render of the landing tab (no tab/* event: activeTab is unchanged)
+      switchTab(activeTab);
 
       // Log stats
       const withEvents = allLocations.filter(l => l.events && l.events.length > 0).length;
