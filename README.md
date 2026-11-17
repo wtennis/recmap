@@ -29,7 +29,8 @@ cd seattle && npx serve .
 
 1. `scripts/fetch-centers.js` — Fetches 28 community center locations from Seattle's ArcGIS API
 2. `seattle/data/curated/schedules.json` — Manually extracted programming from seasonal brochures
-3. `scripts/build-data.js` — Merges centers + schedules into `seattle/data/recmap.json` and generates `.ics` calendar files in `seattle/cal/`
+3. `seattle/data/curated/closures.json` — City closure dates; excluded from calendars via EXDATE
+4. `scripts/build-data.js` — Merges centers + schedules + closures into `seattle/data/recmap.json` and generates `.ics` calendar files in `seattle/cal/`
 
 ## Project Structure
 
@@ -47,5 +48,6 @@ recmap/
     data/
       recmap.json                   # Generated runtime data
       curated/schedules.json        # Source of truth (186 events)
+      curated/closures.json         # City closure dates; excluded from calendars via EXDATE
       sources/centers.geojson       # Fetched center locations
 ```

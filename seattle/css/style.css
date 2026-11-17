@@ -504,6 +504,18 @@ html, body {
 
 .day-tab.active .day-count { color: var(--accent); }
 
+/* Next occurrence of this weekday is a city closure: small amber dot */
+.day-tab.closed::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background: #d97706;
+  vertical-align: middle;
+}
+
 /* ---- Schedule List ---- */
 
 #schedule-list {
@@ -633,6 +645,17 @@ html, body {
   padding: 40px 16px;
   font-size: 14px;
   font-style: italic;
+}
+
+.schedule-closure {
+  background: #fffbeb;
+  border-left: 4px solid #d97706;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #78350f;
 }
 
 /* ---- Subscribe Modal ---- */
