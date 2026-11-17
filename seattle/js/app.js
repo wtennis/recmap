@@ -19,6 +19,7 @@
 
   // ---- State ----
   let allLocations = [];
+  let closures = []; // city closure dates: [{ date: 'YYYY-MM-DD', name }]
   let markersLayer = L.featureGroup();
 
   const filters = {
@@ -844,6 +845,12 @@
     const now = new Date();
     const stamp = `${now.getUTCFullYear()}${String(now.getUTCMonth() + 1).padStart(2, '0')}${String(now.getUTCDate()).padStart(2, '0')}T${String(now.getUTCHours()).padStart(2, '0')}${String(now.getUTCMinutes()).padStart(2, '0')}${String(now.getUTCSeconds()).padStart(2, '0')}Z`;
 
+    // Parse "YYYY-MM-DD" as a local date; new Date("YYYY-MM-DD") is UTC and shifts a day in Pacific time.
+    const closureDates = closures.map(function (c) {
+      const [y, m, d] = c.date.split('-').map(Number);
+      return new Date(y, m - 1, d);
+    });
+
     let n = 0;
     for (const evt of events) {
       const dateRange = parseDateRange(evt.date_range);
@@ -866,6 +873,11 @@
       lines.push(`DTSTART;TZID=America/Los_Angeles:${formatICSDateTime(firstDay, timeRange.startH, timeRange.startM)}`);
       lines.push(`DTEND;TZID=America/Los_Angeles:${formatICSDateTime(firstDay, timeRange.endH, timeRange.endM)}`);
       lines.push(`RRULE:FREQ=WEEKLY;BYDAY=${rruleDay};UNTIL=${untilDate}T235959Z`);
+      for (const closureDate of closureDates) {
+        if (closureDate.getDay() !== DAYS_SUNDAY_FIRST.indexOf(evt.day)) continue;
+        if (closureDate < firstDay || closureDate > dateRange.end) continue;
+        lines.push(`EXDATE;TZID=America/Los_Angeles:${formatICSDateTime(closureDate, timeRange.startH, timeRange.startM)}`);
+      }
       lines.push(`SUMMARY:${icsEscape(evt.program)}`);
       lines.push(`LOCATION:${icsEscape(evt.center + ', ' + evt.address + ', Seattle, WA')}`);
       lines.push(`DESCRIPTION:${desc}`);
@@ -952,12 +964,35 @@
     return results;
   }
 
+  // Next date (today inclusive) that falls on the given weekday name.
+  function nextOccurrenceOfDay(dayName) {
+    const today = new Date();
+    const d = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    const diff = (DAYS_SUNDAY_FIRST.indexOf(dayName) - d.getDay() + 7) % 7;
+    d.setDate(d.getDate() + diff);
+    return d;
+  }
+
+  function closureOn(date) {
+    const key = date.getFullYear() + '-' +
+      String(date.getMonth() + 1).padStart(2, '0') + '-' +
+      String(date.getDate()).padStart(2, '0');
+    return closures.find(function (c) { return c.date === key; }) || null;
+  }
+
+  function formatClosureDate(date) {
+    return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  }
+
   function renderDayTabs() {
     $dayTabs.innerHTML = '';
     for (const day of DAY_ORDER) {
       const count = getFilteredEventsForDay(day).length;
+      const nextDate = nextOccurrenceOfDay(day);
+      const closure = closureOn(nextDate);
       const btn = document.createElement('button');
-      btn.className = 'day-tab' + (day === activeDay ? ' active' : '');
+      btn.className = 'day-tab' + (day === activeDay ? ' active' : '') + (closure ? ' closed' : '');
+      if (closure) btn.title = 'Closed ' + formatClosureDate(nextDate) + ' — ' + closure.name;
       btn.innerHTML = DAY_ABBR[day] + `<span class="day-count">${count}</span>`;
       btn.addEventListener('click', function () {
         activeDay = day;
@@ -970,12 +1005,17 @@
 
   function renderScheduleList() {
     const events = getFilteredEventsForDay(activeDay);
+    const nextDate = nextOccurrenceOfDay(activeDay);
+    const closure = closureOn(nextDate);
+    const closureHTML = closure
+      ? `<div class="schedule-closure">Closed ${esc(formatClosureDate(nextDate))} for ${esc(closure.name)}. All community centers are closed that day.</div>`
+      : '';
     if (events.length === 0) {
-      $scheduleList.innerHTML = '<div class="schedule-empty">No events on ' + DAY_ABBR[activeDay] + ' matching current filters</div>';
+      $scheduleList.innerHTML = closureHTML + '<div class="schedule-empty">No events on ' + DAY_ABBR[activeDay] + ' matching current filters</div>';
       return;
     }
 
-    let html = '';
+    let html = closureHTML;
     for (const evt of events) {
       const costLabel = formatCost(evt.cost);
       const costClass = isFreeEvent(evt.cost) ? 'free' : 'paid';
@@ -1016,6 +1056,7 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       allLocations = data.locations || [];
+      closures = data.closures || [];
 
       // Populate filter dropdowns (fills filter sets) before first render
       const centersWithEvents = allLocations

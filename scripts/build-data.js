@@ -260,7 +260,7 @@ function icsEscapeBuild(str) {
   return (str || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
 }
 
-function buildICS(events, calName) {
+function buildICS(events, calName, closureDates) {
   let cal = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
@@ -296,6 +296,11 @@ function buildICS(events, calName) {
     cal.push(`DTSTART;TZID=America/Los_Angeles:${fmtDT(firstDay, timeRange.startH, timeRange.startM)}`);
     cal.push(`DTEND;TZID=America/Los_Angeles:${fmtDT(firstDay, timeRange.endH, timeRange.endM)}`);
     cal.push(`RRULE:FREQ=WEEKLY;BYDAY=${rruleDay};UNTIL=${untilDate}T235959Z`);
+    for (const closureDate of closureDates) {
+      if (closureDate.getDay() !== DAYS_LIST.indexOf(evt.day)) continue;
+      if (closureDate < firstDay || closureDate > dateRange.end) continue;
+      cal.push(`EXDATE;TZID=America/Los_Angeles:${fmtDT(closureDate, timeRange.startH, timeRange.startM)}`);
+    }
     cal.push(`SUMMARY:${icsEscapeBuild(evt.program)}`);
     cal.push(`LOCATION:${icsEscapeBuild(evt.center + ', ' + evt.address + ', Seattle, WA')}`);
     cal.push(`DESCRIPTION:${desc}`);
@@ -307,12 +312,17 @@ function buildICS(events, calName) {
   return { ics: cal.join('\r\n') + '\r\n', count: n };
 }
 
-function generateCalendarFiles(locations, categories) {
+function generateCalendarFiles(locations, categories, closures) {
   if (!fs.existsSync(CAL_DIR)) {
     fs.mkdirSync(CAL_DIR, { recursive: true });
   }
 
   const allEvents = flattenAllEvents(locations);
+  // Parse "YYYY-MM-DD" as a local date; new Date("YYYY-MM-DD") is UTC and shifts a day in Pacific time.
+  const closureDates = closures.map((c) => {
+    const [y, m, d] = c.date.split('-').map(Number);
+    return new Date(y, m - 1, d);
+  });
   console.log(`\n  Calendar: ${allEvents.length} day-session events flattened`);
 
   const presets = [
@@ -329,7 +339,7 @@ function generateCalendarFiles(locations, categories) {
 
   for (const preset of presets) {
     const filtered = allEvents.filter(preset.filter);
-    const { ics, count } = buildICS(filtered, preset.label);
+    const { ics, count } = buildICS(filtered, preset.label, closureDates);
     const outPath = path.join(CAL_DIR, `${preset.slug}.ics`);
     fs.writeFileSync(outPath, ics);
     console.log(`  ${preset.slug}.ics — ${count} events`);
@@ -477,6 +487,7 @@ function main() {
 
   const centersPath = path.join(SOURCES_DIR, 'centers.geojson');
   const schedulesPath = path.join(CURATED_DIR, 'schedules.json');
+  const closuresPath = path.join(CURATED_DIR, 'closures.json');
 
   if (!fs.existsSync(centersPath)) {
     console.error('Error: Source data not found. Run `node scripts/fetch-centers.js` first.');
@@ -488,8 +499,11 @@ function main() {
     ? loadJSON(schedulesPath)
     : { seasons: [], events: [] };
 
+  const closures = fs.existsSync(closuresPath) ? loadJSON(closuresPath).closures || [] : [];
+
   console.log(`  Centers: ${centersGeo.features.length} features`);
-  console.log(`  Schedule events: ${schedules.events.length}\n`);
+  console.log(`  Schedule events: ${schedules.events.length}`);
+  console.log(`  Closures: ${closures.length} dates\n`);
 
   const locations = processCenters(centersGeo);
 
@@ -505,6 +519,7 @@ function main() {
   const output = {
     generated_at: new Date().toISOString(),
     seasons: schedules.seasons || [],
+    closures,
     categories,
     activities,
     locations,
@@ -513,7 +528,7 @@ function main() {
   fs.writeFileSync(OUT_PATH, JSON.stringify(output, null, 2));
   console.log(`\nWrote ${locations.length} locations to ${OUT_PATH}`);
 
-  generateCalendarFiles(locations, categories);
+  generateCalendarFiles(locations, categories, closures);
 }
 
 main();
